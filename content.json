@@ -104,7 +104,7 @@
         "id": "2.2",
         "title": "Atualização de Dados",
         "date": "04/05/2022",
-        "content": "A atualização de dados ocorre toda vez que o motorista fizer login dentro da fábrica. Veículos, Linhas e Tanques serão copiados para o dispositivo móvel do usuário",
+        "content": "A atualização de dados ocorre toda vez que o motorista fizer login dentro da fábrica. **Veículos, Linhas e Tanques** serão copiados para o dispositivo móvel do usuário",
         "info":"A atualização leva no máximo 60 segundos. O tempo médio estimado é de 15 segundos",
         "lightbox": [
             {
