@@ -9,7 +9,7 @@
     },
     {
         "id": "1",
-        "icon": "fas fa-cog",
+        "icon": "fa fa-cog",
         "title": "Configurações Iniciais",
         "date": "04/05/2022",
         "content": "O menu de engrenagem <img class=\"botao-app\" src=\"assets/images/botao_engrenagem.png\"  /> contém as configurações básicas de funcionamento do App",
@@ -81,7 +81,7 @@
     },
     {
         "id": "2",
-        "icon": "fas fa-user",
+        "icon": "fa fa-user",
         "title": "Login",
         "date": "04/05/2022",
         "content": "Para realizar coletas é necessário fazer o login toda vez que o app for aberto. o ultimo usuário sempre virá preenchido automaticamente, necessitando somente da senha para entrar. Se estiver fora da fábrica, não é possivel trocar o usuario logado.",
@@ -114,15 +114,27 @@
     },
     {
         "id": "3",
-        "icon":"fas fa-glass",
+        "icon": "fa fa-truck-droplet",
         "title": "Pré-coleta",
         "date": "04/05/2022",
-        "content":"A tela de pré-coleta permite ao motorista escolher um dos veículos cadastrados no sistema SCL que já foram baixados para o dispositivo.", 
+        "content": "A tela de pré-coleta permite ao motorista escolher um dos veículos cadastrados no sistema SCL que já foram baixados para o dispositivo.",
         "lightbox": [
             {
                 "image": "assets/images/pre_coleta.png",
                 "title": "Tela de Pré-Coleta"
             }
-        ]      
+        ]
+    },
+    {
+        "id": "3.1",     
+        "title": "Pré-coleta",
+        "date": "04/05/2022",
+        "content": "A tela de pré-coleta permite ao motorista escolher um dos veículos cadastrados no sistema SCL que já foram baixados para o dispositivo.",
+        "lightbox": [
+            {
+                "image": "assets/images/pre_coleta.png",
+                "title": "Tela de Pré-Coleta"
+            }
+        ]
     }
 ]
