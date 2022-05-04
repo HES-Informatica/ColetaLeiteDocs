@@ -102,9 +102,22 @@
     },
     {
         "id": "2.2",
+        "title": "Atualização de Dados",
+        "date": "04/05/2022",
+        "content": "A atualização de dados ocorre toda vez que o motorista fizer login dentro da fábrica. Veículos, Linhas e Tanques serão copiados para o dispositivo móvel do usuário",
+        "info":"A atualização leva no máximo 60 segundos. O tempo médio estimado é de 15 segundos",
+        "lightbox": [
+            {
+                "image": "assets/images/popup_atualizando.png",
+                "title": "Download dos dados em andamento"
+            }
+        ]
+    },
+    {
+        "id": "2.3",
         "title": "Coletas Abertas",
         "date": "2022-05-04",
-        "content": "O motorista pode retomar uma coleta aberta. Caso opte por começar do zero, os dados de coleta atuais são limpos e uma nova coleta será iniciada.",
+        "info": "O motorista pode retomar uma coleta aberta. Caso opte por começar do zero, os dados de coleta atuais são limpos e uma nova coleta será iniciada.",
         "lightbox": [
             {
                 "image": "assets/images/popup_coleta_aberta.png",
