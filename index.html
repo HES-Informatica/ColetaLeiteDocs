@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
 	<title>ColetaLeite! - Manual do Aplicativo</title>
@@ -76,8 +76,7 @@
 						<li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li> -->
 					</ul>
 					<!--//social-list-->
-					<a href="javascript:alert('Ainda Não')"
-						class="btn btn-primary d-none d-lg-flex">Download</a>
+					<a href="javascript:alert('Ainda Não')" class="btn btn-primary d-none d-lg-flex">Download</a>
 				</div>
 				<!--//docs-top-utilities-->
 			</div>
@@ -88,7 +87,7 @@
 	<!--//header-->
 
 
-	<div class="docs-wrapper">
+	<div class="docs-wrapper" id="app">
 		<div id="docs-sidebar" class="docs-sidebar">
 			<div class="top-search-box d-lg-none p-3">
 				<form onsubmit="return window.search(this)" class="search-form">
@@ -100,39 +99,19 @@
 			</div>
 			<nav id="docs-nav" class="docs-nav navbar">
 				<ul class="section-items list-unstyled nav flex-column pb-3">
-					<li class="nav-item section-title mt-3">
-						<a class="nav-link scrollto" href="#section-0">
-							<span class="theme-icon-holder me-2">
-								<i class="fas fa-mobile"></i>
-							</span>
-							Introdução
-						</a>
-					</li>
-					<li class="nav-item section-title mt-3">
-						<a class="nav-link scrollto" href="#section-1">
-							<span class="theme-icon-holder me-2">
-								<i class="fas fa-cog"></i>
-							</span>
-							1. Configurações
-						</a>
-					</li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-1">1.1 Apontamentos de Servidor</a>
-					</li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">1.2 Branding/Logo</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-1-3">1.3 Limpeza de Dados</a></li>
-					<li class="nav-item section-title mt-3">
-						<a class="nav-link scrollto" href="#section-2">
-							<span class="theme-icon-holder me-2">
-								<i class="fas fa-user"></i>
-							</span>
-							2. Login
-						</a>
-					</li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-1"> 2.1 Credenciais</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-2">2.2 Atualização e Dados</a></li>
-					<li class="nav-item"><a class="nav-link scrollto" href="#item-2-3">2.3 Recuperação de Senha</a></li>
-
-
+					<template v-for="item in data">
+						<li v-if="item.header=='h1'" class="nav-item section-title mt-3">
+							<a class="nav-link scrollto" :href="'#section-'+ fixId(item.id)">
+								<span v-if="item.icon" class="theme-icon-holder me-2">
+									<i :class="item.icon"></i>
+								</span>
+								{{item.title}}
+							</a>
+						</li>
+						<li v-else class="nav-item">
+							<a class="nav-link scrollto" :href="'#item-'+ fixId(item.id)">{{item.title}}</a>
+						</li>
+					</template>
 				</ul>
 
 			</nav>
@@ -140,84 +119,30 @@
 		</div>
 		<!--//docs-sidebar-->
 		<div class="docs-content">
+
 			<div class="container">
 
-				<article class="docs-article" id="section-0">
+				<article v-for="item in data" class="docs-article" v-bind:id="'section-' + fixId(item.id)">
 					<header class="docs-header">
-						<h1 class="docs-heading">Introdução<span class="docs-time">Atualizado em: 2022-05-04</span>
-						</h1>
-						<section class="docs-intro">
-							<p>Aplicação focada na coleta de leite dos carreteiros, passando pelas linhas de coleta,
-								pegando informações dos tanques e do leite coletado atualmente.</p>
-						</section>
-
+						<component :is="'h' + item.id.split('.').length" :class="{'docs-heading': (item.id.split('.').length <= 1), 'section-heading': (item.id.split('.').length > 1) }"><span v-if="item.title" v-html="item.title"></span><span
+								class="docs-time" v-if="item.date">Atualizado em:
+								{{item.date}}</span>
+						</component>					 
 					</header>
-				</article>
-
-				<article class="docs-article" id="section-1">
-					<header class="docs-header">
-						<h1 class="docs-heading">Configurações Iniciais <span class="docs-time">Atualizado em:
-								2022-05-04</span>
-						</h1>
-						<section class="docs-intro">
-							<p>O menu de engrenagem <img class="botao-app" src="assets/images/botao_engrenagem.png"
-									alt="" />
-								contém as configurações básicas de funcionamento do App</p>
-							<img src="" class="img-fluid print-app" alt="">
-
-							<div class="simplelightbox-gallery-10 row mb-3">
-								<div class="col-12 col-md-4 mb-3">
-									<a href="assets/images/login_menu.png">
-										<img class="figure-img img-fluid shadow rounded print-app"
-											src="assets/images/login_menu.png" alt=""
-											title="Tela de login com menu de engrenagem aberto" />
-									</a>
-								</div>
-								<!--//col-->
-
-							</div>
-							<!--//gallery-->
-
-
-						</section>
-
-					</header>
-
-					<section class="docs-section" id="item-1-1">
-						<h2 class="section-heading">Apontamentos de Servidor</h2>
-						<p>O aplicativo precisa estar configurado para enviar as coletas para a fábrica quando estiver
-							dentro da rede da fábrica.
-							Esta configuração está disponivel no menu da engrenagem, na tela de login. Seu icone é
-							representado por uma nuvem.<br /><img class="botao-app" src="assets/images/BOTAO_NUVEM.png"
-								alt="" />
-						</p>
-						<div class="simplelightbox-gallery-11 row mb-3">
-							<div class="col-12 col-md-4 mb-3">
-								<a href="assets/images/popup_adm.png">
-									<img class="figure-img img-fluid shadow rounded print-app"
-										src="assets/images/popup_adm.png" alt=""
-										title="Popup de confirmação de acesso administrativo" />
+					<section class="docs-section" v-bind:id="'item-' + fixId(item.id)">
+						<!-- <h2 class="section-heading">{{item.title}}</h2> -->
+						<p v-html="item.content"></p>
+						<div :class="'simplelightbox-gallery-' + fixId(item.id)" class="row mb-3">
+							<div class="col-12 col-md-4 mb-3" v-if="item.lightbox" v-for="img in item.lightbox">
+								<a v-bind:href="img.image">
+									<img class="figure-img img-fluid shadow rounded print-app" v-bind:src="img.image"
+										alt="" v-bind:title="img.title" />
 								</a>
 							</div>
-							<div class="col-12 col-md-4 mb-3">
-								<a href="assets/images/popup_senha.png">
-									<img class="figure-img img-fluid shadow rounded print-app"
-										src="assets/images/popup_senha.png" alt=""
-										title="Popup de confirmação de senha" />
-								</a>
-							</div>
-							<div class="col-12 col-md-4 mb-3">
-								<a href="assets/images/popup_servidor.png">
-									<img class="figure-img img-fluid shadow rounded print-app"
-										src="assets/images/popup_servidor.png" alt=""
-										title="Popup de configuração do servidor" />
-								</a>
-							</div>
-							<!--//col-->
-
+							{{ openLightbox(item.id) }}
 						</div>
 
-						<div class="callout-block callout-block-warning me-1">
+						<div v-if="item.warning && item.warning != ''" class="callout-block callout-block-warning me-1">
 							<div class="content">
 								<h4 class="callout-title">
 									<span class="callout-icon-holder">
@@ -226,19 +151,25 @@
 									<!--//icon-holder-->
 									Atenção
 								</h4>
-								<p>Esta configuraçao necessita da senha administrativa para ser alterada. Se voce nao e
-									um administrador do aplicativo, contate um representante H&S. </p>
+								<p v-html="item.warning"></p>
 							</div>
 							<!--//content-->
 						</div>
-						<!--//callout-block-->
+						<p v-html="item.aftercontent"></p>
 
-						<p>
-							O apontamento é feito através de uma <b>URL</b> ou <b>IPv4</b>. Certifique-se de testar o
-							acesso através
-							do botão <b>Testar</b>
-						</p>
 					</section>
+				</article>
+				<!--//col-->
+			</div>
+
+			<div style="display: none;" class="container">
+
+
+
+				<article class="docs-article">
+
+
+
 					<section class="docs-section" id="item-1-2">
 						<h2 class="section-heading">Branding/Logo</h2>
 						<p>Apesar de opcional, esta configuração é interessante para o cliente pois aplica a marca dele
@@ -353,8 +284,7 @@
 								<div class="col-12 col-md-4 mb-3">
 									<a href="assets/images/login.png">
 										<img class="figure-img img-fluid shadow rounded print-app"
-											src="assets/images/login.png" alt=""
-											title="Tela de login" />
+											src="assets/images/login.png" alt="" title="Tela de login" />
 									</a>
 								</div>
 								<!--//col-->
@@ -364,7 +294,7 @@
 							<p>Os login subsequentes podem ser realizados desconectado da rede ou da internet. Caso
 								esteja conectado á fabrica, os login subsequentes também atualizarão os dados (inclusive
 								sua senha, caso tenha solicitado alteração ao administrador).</p>
-							
+
 
 
 						</section>
@@ -381,9 +311,11 @@
 					<section class="docs-section" id="item-2-2">
 						<h2 class="section-heading">Atualização de Dados</h2>
 						<p>
-							O primeiro login <b>deve</b> ser feito dentro da fábrica, com o dispositivo conectado na mesma rede do
+							O primeiro login <b>deve</b> ser feito dentro da fábrica, com o dispositivo conectado na
+							mesma rede do
 							servidor. Este primeiro login é importante pós além de <b>validar as credenciais</b>do
-							motorista/carreteiro, também vai <b>atualizar os dados do dispositivo</b> (Veículos, Linhas e
+							motorista/carreteiro, também vai <b>atualizar os dados do dispositivo</b> (Veículos, Linhas
+							e
 							Tanques).
 						</p>
 						<p>Os logins subsequentes podem ser realizados desconectado da rede ou da internet. Caso esteja
@@ -393,22 +325,137 @@
 					<section class="docs-section" id="item-2-3">
 						<h2 class="section-heading">Recuperação de Senha</h2>
 						<p>
-							 Caso tenha esquecido a senha, solicite ao administrador uma nova senha. ela será sincronizada com o dispositivo quando se conectar novamente com a fabrica</p>
-							 <div class="callout-block callout-block-warning me-1">
-								<div class="content">
-									<h4 class="callout-title">
-										<span class="callout-icon-holder">
-											<i class="fas fa-exclamation-triangle"></i>
-										</span>
-										<!--//icon-holder-->
-										Atenção
-									</h4>
-									<p>Não existe processo de recuperação de senha enquanto o motorista não está
-										conectado a fábrica. Esquecer a senha pode impedir a realização de uma coleta.
-									</p>
-								</div>
-								<!--//content-->
+							Caso tenha esquecido a senha, solicite ao administrador uma nova senha. ela será
+							sincronizada com o dispositivo quando se conectar novamente com a fabrica</p>
+						<div class="callout-block callout-block-warning me-1">
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-exclamation-triangle"></i>
+									</span>
+									<!--//icon-holder-->
+									Atenção
+								</h4>
+								<p>Não existe processo de recuperação de senha enquanto o motorista não está
+									conectado a fábrica. Esquecer a senha pode impedir a realização de uma coleta.
+								</p>
 							</div>
+							<!--//content-->
+						</div>
+					</section>
+					<section class="docs-section" id="item-2-4">
+						<h2 class="section-heading">Coletas Abertas</h2>
+						<p>
+							O motorista pode retomar uma coleta aberta. Caso opte por começar do zero, os dados de
+							coleta atuais são limpos e uma nova coleta será iniciada.
+						</p>
+						<div class="simplelightbox-gallery-24 row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/popup_coleta_aberta.png">
+									<img class="figure-img img-fluid shadow rounded print-app"
+										src="assets/images/popup_coleta_aberta.png" alt="" title="Tela de login" />
+								</a>
+							</div>
+							<!--//col-->
+
+						</div>
+					</section>
+
+
+
+				</article>
+
+
+				<article class="docs-article" id="section-2">
+					<header class="docs-header">
+						<h1 class="docs-heading">Login <span class="docs-time">Atualizado em:
+								2022-05-04</span>
+						</h1>
+						<section class="docs-intro">
+							<p>Para realizar coletas é necessário fazer o login toda vez que o app for aberto. o ultimo
+								usuário sempre virá preenchido automaticamente, necessitando somente da senha para
+								entrar. Se estiver fora da fábrica, não é possivel trocar o usuario logado.</p>
+
+
+							<div class="simplelightbox-gallery-20 row mb-3">
+								<div class="col-12 col-md-4 mb-3">
+									<a href="assets/images/login.png">
+										<img class="figure-img img-fluid shadow rounded print-app"
+											src="assets/images/login.png" alt="" title="Tela de login" />
+									</a>
+								</div>
+								<!--//col-->
+
+							</div>
+							<!--//gallery-->
+							<p>Os login subsequentes podem ser realizados desconectado da rede ou da internet. Caso
+								esteja conectado á fabrica, os login subsequentes também atualizarão os dados (inclusive
+								sua senha, caso tenha solicitado alteração ao administrador).</p>
+
+
+
+						</section>
+
+					</header>
+
+					<section class="docs-section" id="item-2-1">
+						<h2 class="section-heading">Credenciais</h2>
+						<p>
+							Para acessar o App, é necessário liberação por parte do administrador. Após liberação, voce
+							pode acessar o app com seu CPF, CNPJ ou Email cadastrados no sistema SCL.
+						</p>
+					</section>
+					<section class="docs-section" id="item-2-2">
+						<h2 class="section-heading">Atualização de Dados</h2>
+						<p>
+							O primeiro login <b>deve</b> ser feito dentro da fábrica, com o dispositivo conectado na
+							mesma rede do
+							servidor. Este primeiro login é importante pós além de <b>validar as credenciais</b>do
+							motorista/carreteiro, também vai <b>atualizar os dados do dispositivo</b> (Veículos, Linhas
+							e
+							Tanques).
+						</p>
+						<p>Os logins subsequentes podem ser realizados desconectado da rede ou da internet. Caso esteja
+							conectado á fabrica, os login subsequentes também atualizarão os dados (inclusive sua senha,
+							caso tenha solicitado alteração ao administrador).</p>
+					</section>
+					<section class="docs-section" id="item-2-3">
+						<h2 class="section-heading">Recuperação de Senha</h2>
+						<p>
+							Caso tenha esquecido a senha, solicite ao administrador uma nova senha. ela será
+							sincronizada com o dispositivo quando se conectar novamente com a fabrica</p>
+						<div class="callout-block callout-block-warning me-1">
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-exclamation-triangle"></i>
+									</span>
+									<!--//icon-holder-->
+									Atenção
+								</h4>
+								<p>Não existe processo de recuperação de senha enquanto o motorista não está
+									conectado a fábrica. Esquecer a senha pode impedir a realização de uma coleta.
+								</p>
+							</div>
+							<!--//content-->
+						</div>
+					</section>
+					<section class="docs-section" id="item-2-4">
+						<h2 class="section-heading">Coletas Abertas</h2>
+						<p>
+							O motorista pode retomar uma coleta aberta. Caso opte por começar do zero, os dados de
+							coleta atuais são limpos e uma nova coleta será iniciada.
+						</p>
+						<div class="simplelightbox-gallery-24 row mb-3">
+							<div class="col-12 col-md-4 mb-3">
+								<a href="assets/images/popup_coleta_aberta.png">
+									<img class="figure-img img-fluid shadow rounded print-app"
+										src="assets/images/popup_coleta_aberta.png" alt="" title="Tela de login" />
+								</a>
+							</div>
+							<!--//col-->
+
+						</div>
 					</section>
 
 
@@ -428,6 +475,8 @@
 
 
 	<!-- Javascript -->
+	<script src="https://unpkg.com/vue@3"></script>
+	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	<script src="assets/plugins/popper.min.js"></script>
 	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 
