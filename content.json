@@ -1,8 +1,7 @@
 [
     {
         "id": "intro",
-        "icon": "fas fa-mobile",
-        "header": "h1",
+        "icon": "fas fa-mobile",      
         "title": "Introdução",
         "date": "04/05/2022",
         "content": "Aplicação focada na coleta de leite dos carreteiros, passando pelas linhas de coleta, pegando informações dos tanques e do leite coletado atualmente.",
@@ -10,8 +9,7 @@
     },
     {
         "id": "1",
-        "icon": "fas fa-cog",
-        "header": "h1",
+        "icon": "fas fa-cog",     
         "title": "Configurações Iniciais",
         "date": "2022-05-04",
         "content": "O menu de engrenagem <img class=\"botao-app\" src=\"assets/images/botao_engrenagem.png\"  /> contém as configurações básicas de funcionamento do App",
