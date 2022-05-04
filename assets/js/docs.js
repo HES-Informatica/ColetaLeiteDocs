@@ -81,9 +81,8 @@ fetch('content.json', { mode: 'cors' })
 							var classe = "." + box.className.split(" ")[0] + ' a'
 							console.log(classe);
 							lightboxes.push(new SimpleLightbox(classe, { /* options */ }));
-
 						});
-						lightboxes[0].open();
+						 
 					})
 				},
 				methods: {
