@@ -28,71 +28,91 @@ window.onload = function () {
 
 fetch('content.json', { mode: 'cors' })
 	.then((response) => {
-			response.json().then(function (json) {
+		response.json().then(function (json) {
 
-				json.forEach((item) => {
-						item.content = marked.parse(item.content ?? "");
-						item.aftercontent = marked.parse(item.aftercontent ?? "");
-						item.warning = marked.parse(item.warning ?? "");
-					});
-
-				Vue.createApp({
-					methods: {
-						openLightbox(id) {
-							lightboxes.push(new SimpleLightbox(`.simplelightbox-gallery-${this.fixId(id)}`, { /* options */ }));
-						},
-						fixId(id) {
-							id = `${id}`.split('.').join("-");
-							return id;
-						}
-					},
-					data() {
-						return { data: json };
-					}
-				}).mount('#app');
-
+			json.forEach((item) => {
+				item.content = marked.parse(item.content ?? "");
+				item.aftercontent = marked.parse(item.aftercontent ?? "");
+				item.warning = marked.parse(item.warning ?? "");
 			});
-		})
+
+			Vue.createApp({
+				mounted: function () {
+					this.$nextTick(function () {
+
+						const spy = new Gumshoe('#docs-nav a', {
+							offset: 69 //sticky header height
+						});
+
+
+
+						/* ===== Smooth scrolling ====== */
+						/*  Note: You need to include smoothscroll.min.js (smooth scroll behavior polyfill) on the page to cover some browsers */
+						/* Ref: https://github.com/iamdustan/smoothscroll */
+
+						sidebarLinks.forEach((sidebarLink) => {
+
+							sidebarLink.addEventListener('click', (e) => {
+
+								e.preventDefault();
+
+								var target = sidebarLink.getAttribute("href").replace('#', '');
+
+								//console.log(target);
+
+								document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+
+
+								//Collapse sidebar after clicking
+								if (sidebar.classList.contains('sidebar-visible') && window.innerWidth < 1200) {
+
+									sidebar.classList.remove('sidebar-visible');
+									sidebar.classList.add('sidebar-hidden');
+								}
+
+							});
+
+						});
+
+
+						const boxes = document.querySelectorAll('[class*="simplelightbox-gallery-"]');
+						boxes.forEach(function (box) {
+							console.log(box);
+							lightboxes.push(new SimpleLightbox(box, { /* options */ }));
+
+						});
+					})
+				},
+				methods: {
+
+
+					fixId(id) {
+						id = `${id}`.split('.').join("-");
+						return id;
+					},
+					headerType(id) {
+						var i = id.split('.').length;
+						switch (i) {
+							case 1:
+								return "h1";
+							case 2:
+								return "h2";
+							default:
+								return "h5";
+						}
+					}
+				},
+				data() {
+					return { data: json };
+				}
+			}).mount('#app');
+
+		});
+	})
 	.then(function () {
 		console.log('Request successful');
 
-		
 
-		/* ===== Gumshoe SrollSpy ===== */
-		/* Ref: https://github.com/cferdinandi/gumshoe  */
-		// Initialize Gumshoe
-		var spy = new Gumshoe('#docs-nav a', {
-			offset: 69 //sticky header height
-		});
-
-
-		/* ===== Smooth scrolling ====== */
-		/*  Note: You need to include smoothscroll.min.js (smooth scroll behavior polyfill) on the page to cover some browsers */
-		/* Ref: https://github.com/iamdustan/smoothscroll */
-
-		sidebarLinks.forEach((sidebarLink) => {
-
-			sidebarLink.addEventListener('click', (e) => {
-
-				e.preventDefault();
-
-				var target = sidebarLink.getAttribute("href").replace('#', '');
-
-				//console.log(target);
-
-				document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
-
-
-				//Collapse sidebar after clicking
-				if (sidebar.classList.contains('sidebar-visible') && window.innerWidth < 1200) {
-
-					sidebar.classList.remove('sidebar-visible');
-					sidebar.classList.add('sidebar-hidden');
-				}
-
-			});
-
-		});
 
 
 		/* ====== SimpleLightbox Plugin ======= */

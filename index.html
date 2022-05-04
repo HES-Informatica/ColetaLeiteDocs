@@ -100,7 +100,7 @@
 			<nav id="docs-nav" class="docs-nav navbar">
 				<ul class="section-items list-unstyled nav flex-column pb-3">
 					<template v-for="item in data">
-						<li v-if="item.header=='h1'" class="nav-item section-title mt-3">
+						<li v-if="headerType(item.id) =='h1'" class="nav-item section-title mt-3">
 							<a class="nav-link scrollto" :href="'#section-'+ fixId(item.id)">
 								<span v-if="item.icon" class="theme-icon-holder me-2">
 									<i :class="item.icon"></i>
@@ -113,7 +113,7 @@
 						</li>
 					</template>
 				</ul>
-
+			
 			</nav>
 			<!--//docs-nav-->
 		</div>
@@ -124,13 +124,16 @@
 
 				<article v-for="item in data" class="docs-article" v-bind:id="'section-' + fixId(item.id)">
 					<header class="docs-header">
-						<component :is="'h' + item.id.split('.').length" :class="{'docs-heading': (item.id.split('.').length <= 1), 'section-heading': (item.id.split('.').length > 1) }"><span v-if="item.title" v-html="item.title"></span><span
-								class="docs-time" v-if="item.date">Atualizado em:
+						<component :is="headerType(item.id)"
+							:class="{'docs-heading': (headerType(item.id) =='h1'), 'section-heading': (headerType(item.id) =='h2') }">
+							<span v-if="item.title" v-html="item.title"></span><span class="docs-time"
+								v-if="item.date && item.date != ''">Atualizado em:
 								{{item.date}}</span>
-						</component>					 
+						</component>
 					</header>
-					<section class="docs-section" v-bind:id="'item-' + fixId(item.id)">
-						<!-- <h2 class="section-heading">{{item.title}}</h2> -->
+					<section
+						:class="{'docs-intro': (headerType(item.id) =='h1'), 'docs-section': (headerType(item.id) =='h2') }"
+						v-bind:id="'item-' + fixId(item.id)">
 						<p v-html="item.content"></p>
 						<div :class="'simplelightbox-gallery-' + fixId(item.id)" class="row mb-3">
 							<div class="col-12 col-md-4 mb-3" v-if="item.lightbox" v-for="img in item.lightbox">
@@ -139,7 +142,7 @@
 										alt="" v-bind:title="img.title" />
 								</a>
 							</div>
-							{{ openLightbox(item.id) }}
+						 
 						</div>
 
 						<div v-if="item.warning && item.warning != ''" class="callout-block callout-block-warning me-1">
@@ -161,7 +164,7 @@
 				</article>
 				<!--//col-->
 			</div>
- 
+
 		</div>
 	</div>
 	<!--//docs-wrapper-->

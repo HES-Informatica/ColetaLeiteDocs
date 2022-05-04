@@ -104,9 +104,17 @@
     },
     {
         "id": "2.2",
-        "title": "Recuperação de Senha",
+        "title": "Coletas Abertas",
         "date": "2022-05-04",
-        "content": "Caso tenha esquecido a senha, solicite ao administrador uma nova senha. ela será sincronizada com o dispositivo quando se conectar novamente com a fabrica.",
-        "warning": "Esquecer sua senha fora da fábrica pode te impedir de realizar uma coleta"
+        "content": "O motorista pode retomar uma coleta aberta. Caso opte por começar do zero, os dados de coleta atuais são limpos e uma nova coleta será iniciada.",
+        "lightbox": [
+            {
+                "image": "assets/images/popup_coleta_aberta.png",
+                "title": "Popup de coleta aberta"
+            }
+        ]
+    },
+    {
+        "id":"2.3"
     }
 ]
