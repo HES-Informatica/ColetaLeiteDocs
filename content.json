@@ -63,7 +63,7 @@
         "date": "2022-05-04",
         "content": "Caso seja necessário, o usuário pode limpar os dados offline do aplicativo. Entende-se por dados offline tudo aquilo que foi copiado do servidor para o dispositivo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma lata com um X.<br /><img class='botao-app' src='assets/images/BOTAO_APAGAR.png'  />",
         "warning": "Ao executar este procedimento NÃO SERÁ POSSÍVEL realizar o login fora da fábrica. Será necessário recuperar os dados de login, veículos, linhas e tanques na fábrica.",
-        "aftercontent": "Para evitar acidentes com os dados, uma confirmação por texto é necessária",
+        "aftercontent": "Para evitar acidentes com os dados, uma confirmação por texto é necessária.",
         "lightbox": [
             {
                 "image": "assets/images/popup_senha.png",
@@ -72,15 +72,41 @@
         ]
     },
     {
+        "id": "1.3.1",
+        "title": "O Que é Removido",
+        "content": " - Último Veículo usado\r\n - Lísta de Veículos\r\n - Linhas Recentes\r\n - Lista de Linhas\r\n - Lista de Tanques\r\n - Informações de Login e Senha"
+    },
+    {
+        "id": "1.3.2",
+        "title": "O Que não é Removido",
+        "content": " - Informações de Coletas Realizadas\r\n - Logo Customizado do Aplicativo\r\n - Configuração de Apontamento do Servidor"
+    },
+    {
         "id": "2",
+        "icon": "fas fa-user",
         "title": "Login",
         "date": "2022-05-04",
         "content": "Para realizar coletas é necessário fazer o login toda vez que o app for aberto. o ultimo usuário sempre virá preenchido automaticamente, necessitando somente da senha para entrar. Se estiver fora da fábrica, não é possivel trocar o usuario logado.",
+        "aftercontent": "Os logins subsequentes podem ser realizados desconectado da rede ou da internet. Caso esteja conectado á fabrica, os login subsequentes também atualizarão os dados (inclusive sua senha, caso tenha solicitado alteração ao administrador).",
         "lightbox": [
             {
-                "image": "assets/images/popup_senha.png",
-                "title": "Popup de confirmação de senha"
+                "image": "assets/images/login.png",
+                "title": "Tela de Login"
             }
         ]
+    },
+    {
+        "id": "2.1",
+        "title": "Credenciais",
+        "date": "2022-05-04",
+        "content": "Para acessar o App, é necessário liberação por parte do administrador. Após liberação, voce pode acessar o app com seu CPF, CNPJ ou Email cadastrados no sistema SCL.",
+        "warning": "O primeiro login deve  ser feito dentro da fábrica, com o dispositivo conectado na mesma rede do servidor. Este primeiro login é importante pós além de  validar as credenciais do motorista/carreteiro, também vai  atualizar os dados do dispositivo  (Veículos, Linhas e Tanques)."
+    },
+    {
+        "id": "2.2",
+        "title": "Recuperação de Senha",
+        "date": "2022-05-04",
+        "content": "Caso tenha esquecido a senha, solicite ao administrador uma nova senha. ela será sincronizada com o dispositivo quando se conectar novamente com a fabrica.",
+        "warning": "Esquecer sua senha fora da fábrica pode te impedir de realizar uma coleta"
     }
 ]
