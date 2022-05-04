@@ -74,13 +74,16 @@ fetch('content.json', { mode: 'cors' })
 
 						});
 
-
+						/* ====== SimpleLightbox Plugin ======= */
+						/*  Ref: https://github.com/andreknieriem/simplelightbox */
 						const boxes = document.querySelectorAll('[class*="simplelightbox-gallery-"]');
 						boxes.forEach(function (box) {
-							console.log(box);
-							lightboxes.push(new SimpleLightbox(box, { /* options */ }));
+							var classe = "." + box.className.split(" ")[0] + ' a'
+							console.log(classe);
+							lightboxes.push(new SimpleLightbox(classe, { /* options */ }));
 
 						});
+						lightboxes[0].open();
 					})
 				},
 				methods: {
@@ -111,13 +114,6 @@ fetch('content.json', { mode: 'cors' })
 	})
 	.then(function () {
 		console.log('Request successful');
-
-
-
-
-		/* ====== SimpleLightbox Plugin ======= */
-		/*  Ref: https://github.com/andreknieriem/simplelightbox */
-
 	})
 	.catch(function (error) {
 		console.log('Request failed', error)
