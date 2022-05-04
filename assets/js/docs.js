@@ -8,49 +8,55 @@ const sidebarLinks = document.querySelectorAll('#docs-sidebar .scrollto');
 var lightboxes = [];
 
 
+window.onload = function () {
+	responsiveSidebar();
+
+	sidebarToggler.addEventListener('click', () => {
+		if (sidebar.classList.contains('sidebar-visible')) {
+			console.log('visible');
+			sidebar.classList.remove('sidebar-visible');
+			sidebar.classList.add('sidebar-hidden');
+
+		} else {
+			console.log('hidden');
+			sidebar.classList.remove('sidebar-hidden');
+			sidebar.classList.add('sidebar-visible');
+		}
+	});
+
+}
+
 fetch('content.json', { mode: 'cors' })
-	.then(function (response) {
-		response.json().then(function (json) {
-			json.forEach(x => { console.log(x); });
-			Vue.createApp({
-				methods: {
-					openLightbox(id) {						 
-						lightboxes.push(new SimpleLightbox(`.simplelightbox-gallery-${this.fixId(id)}`, {/* options */ }));						 
-					},
-					fixId(id) {
-						id = `${id}`.split('.').join("-");
-						return id;
-					}
-				},
-				data() {
-					json.forEach(function (item, i) { 
+	.then((response) => {
+			response.json().then(function (json) {
 
-						item.content = marked.parse(item.content);
+				json.forEach((item) => {
+						item.content = marked.parse(item.content ?? "");
 						item.aftercontent = marked.parse(item.aftercontent ?? "");
-					})
-					return { data: json };
-				}
-			}).mount('#app');
+						item.warning = marked.parse(item.warning ?? "");
+					});
 
-		});
-	})
-	.then(function (text) {
-		console.log('Request successful', text);
+				Vue.createApp({
+					methods: {
+						openLightbox(id) {
+							lightboxes.push(new SimpleLightbox(`.simplelightbox-gallery-${this.fixId(id)}`, { /* options */ }));
+						},
+						fixId(id) {
+							id = `${id}`.split('.').join("-");
+							return id;
+						}
+					},
+					data() {
+						return { data: json };
+					}
+				}).mount('#app');
 
-		responsiveSidebar();
+			});
+		})
+	.then(function () {
+		console.log('Request successful');
 
-		sidebarToggler.addEventListener('click', () => {
-			if (sidebar.classList.contains('sidebar-visible')) {
-				console.log('visible');
-				sidebar.classList.remove('sidebar-visible');
-				sidebar.classList.add('sidebar-hidden');
-
-			} else {
-				console.log('hidden');
-				sidebar.classList.remove('sidebar-hidden');
-				sidebar.classList.add('sidebar-visible');
-			}
-		});
+		
 
 		/* ===== Gumshoe SrollSpy ===== */
 		/* Ref: https://github.com/cferdinandi/gumshoe  */

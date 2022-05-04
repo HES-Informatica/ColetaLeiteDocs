@@ -23,7 +23,7 @@
         ]
     },
     {
-        "id": "1.1",      
+        "id": "1.1",
         "title": "Apontamentos de Servidor",
         "date": "2022-05-04",
         "content": "O aplicativo precisa estar configurado para enviar as coletas para a fábrica quando estiver dentro da rede da fábrica. Esta configuração está disponivel no menu da engrenagem, na tela de login. Seu icone é representado por uma nuvem.<br /><img class='botao-app' src='assets/images/BOTAO_NUVEM.png' />",
@@ -44,7 +44,7 @@
         ]
     },
     {
-        "id": "1.2",        
+        "id": "1.2",
         "title": "Branding/logo",
         "date": "2022-05-04",
         "content": "Apesar de opcional, esta configuração é interessante para o cliente pois aplica a marca dele no aplicativo. Esta configuração está disponível no menu da engrenagem, na tela de login.        Seu ícone é representado por uma imagem.<br /><img class='botao-app' src='assets/images/BOTAO_IMAGEM.png'   />",
@@ -58,12 +58,25 @@
         ]
     },
     {
-        "id": "1.3",        
+        "id": "1.3",
         "title": "Limpeza de Dados",
         "date": "2022-05-04",
         "content": "Caso seja necessário, o usuário pode limpar os dados offline do aplicativo. Entende-se por dados offline tudo aquilo que foi copiado do servidor para o dispositivo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma lata com um X.<br /><img class='botao-app' src='assets/images/BOTAO_APAGAR.png'  />",
-        "warning": "Esta configuraçao necessita da senha administrativa para ser alterada. Se voce nao e um administrador do aplicativo, contate um representante H&S.",
-           "lightbox": [
+        "warning": "Ao executar este procedimento NÃO SERÁ POSSÍVEL realizar o login fora da fábrica. Será necessário recuperar os dados de login, veículos, linhas e tanques na fábrica.",
+        "aftercontent": "Para evitar acidentes com os dados, uma confirmação por texto é necessária",
+        "lightbox": [
+            {
+                "image": "assets/images/popup_senha.png",
+                "title": "Popup de confirmação de senha"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Login",
+        "date": "2022-05-04",
+        "content": "Para realizar coletas é necessário fazer o login toda vez que o app for aberto. o ultimo usuário sempre virá preenchido automaticamente, necessitando somente da senha para entrar. Se estiver fora da fábrica, não é possivel trocar o usuario logado.",
+        "lightbox": [
             {
                 "image": "assets/images/popup_senha.png",
                 "title": "Popup de confirmação de senha"
