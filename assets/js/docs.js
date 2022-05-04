@@ -1,30 +1,8 @@
 "use strict";
 
-
-/* ====== Define JS Constants ====== */
-const sidebarToggler = document.getElementById('docs-sidebar-toggler');
-const sidebar = document.getElementById('docs-sidebar');
-const sidebarLinks = document.querySelectorAll('#docs-sidebar .scrollto');
 var lightboxes = [];
 
 
-window.onload = function () {
-	responsiveSidebar();
-
-	sidebarToggler.addEventListener('click', () => {
-		if (sidebar.classList.contains('sidebar-visible')) {
-			console.log('visible');
-			sidebar.classList.remove('sidebar-visible');
-			sidebar.classList.add('sidebar-hidden');
-
-		} else {
-			console.log('hidden');
-			sidebar.classList.remove('sidebar-hidden');
-			sidebar.classList.add('sidebar-visible');
-		}
-	});
-
-}
 
 fetch('content.json', { mode: 'cors' })
 	.then((response) => {
@@ -40,6 +18,12 @@ fetch('content.json', { mode: 'cors' })
 				mounted: function () {
 					this.$nextTick(function () {
 
+						var sidebar = document.getElementById('docs-sidebar');
+
+
+						responsiveSidebar();
+
+
 						const spy = new Gumshoe('#docs-nav a', {
 							offset: 69 //sticky header height
 						});
@@ -50,7 +34,7 @@ fetch('content.json', { mode: 'cors' })
 						/*  Note: You need to include smoothscroll.min.js (smooth scroll behavior polyfill) on the page to cover some browsers */
 						/* Ref: https://github.com/iamdustan/smoothscroll */
 
-						sidebarLinks.forEach((sidebarLink) => {
+						document.querySelectorAll('#docs-sidebar .scrollto').forEach((sidebarLink) => {
 
 							sidebarLink.addEventListener('click', (e) => {
 
@@ -82,7 +66,20 @@ fetch('content.json', { mode: 'cors' })
 							console.log(classe);
 							lightboxes.push(new SimpleLightbox(classe, { /* options */ }));
 						});
-						 
+
+						document.getElementById('docs-sidebar-toggler').addEventListener('click', () => {
+							if (sidebar.classList.contains('sidebar-visible')) {
+								console.log('visible');
+								sidebar.classList.remove('sidebar-visible');
+								sidebar.classList.add('sidebar-hidden');
+
+							} else {
+								console.log('hidden');
+								sidebar.classList.remove('sidebar-hidden');
+								sidebar.classList.add('sidebar-visible');
+							}
+						});
+
 					})
 				},
 				methods: {
@@ -132,11 +129,12 @@ window.search = function (form) {
 	window.find(form.children[0].value);
 	return false;
 };
-// window.find(document.getElementById('searchFieldSidebar').value)
+
 
 
 
 function responsiveSidebar() {
+	let sidebar = document.getElementById('docs-sidebar');
 	let w = window.innerWidth;
 	if (w >= 1200) {
 		// if larger 
