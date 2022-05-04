@@ -19,16 +19,11 @@ fetch('content.json', { mode: 'cors' })
 					this.$nextTick(function () {
 
 						var sidebar = document.getElementById('docs-sidebar');
-
-
 						responsiveSidebar();
-
 
 						const spy = new Gumshoe('#docs-nav a', {
 							offset: 69 //sticky header height
 						});
-
-
 
 						/* ===== Smooth scrolling ====== */
 						/*  Note: You need to include smoothscroll.min.js (smooth scroll behavior polyfill) on the page to cover some browsers */
@@ -42,9 +37,10 @@ fetch('content.json', { mode: 'cors' })
 
 								var target = sidebarLink.getAttribute("href").replace('#', '');
 
-								//console.log(target);
+								console.log(target);
 
 								document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+						 
 
 
 								//Collapse sidebar after clicking
@@ -83,8 +79,6 @@ fetch('content.json', { mode: 'cors' })
 					})
 				},
 				methods: {
-
-
 					fixId(id) {
 						id = `${id}`.split('.').join("-");
 						return id;
@@ -118,9 +112,6 @@ fetch('content.json', { mode: 'cors' })
 
 
 
-/* ===== Responsive Sidebar ====== */
-
-
 window.onresize = function () {
 	responsiveSidebar();
 };
@@ -132,7 +123,7 @@ window.search = function (form) {
 
 
 
-
+/* ===== Responsive Sidebar ====== */
 function responsiveSidebar() {
 	let sidebar = document.getElementById('docs-sidebar');
 	let w = window.innerWidth;
