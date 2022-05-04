@@ -117,7 +117,7 @@
         "icon": "fa fa-truck-droplet",
         "title": "Pré-coleta",
         "date": "04/05/2022",
-        "content": "A tela de pré-coleta permite ao motorista escolher um dos veículos cadastrados no sistema SCL que já foram baixados para o dispositivo.",
+        "content": "Antes de iniciar a coleta, é necessário preencher alguns campos, como o  (modelo/placa) e o odômetro",
         "lightbox": [
             {
                 "image": "assets/images/pre_coleta.png",
@@ -127,13 +127,16 @@
     },
     {
         "id": "3.1",     
-        "title": "Pré-coleta",
-        "date": "04/05/2022",
-        "content": "A tela de pré-coleta permite ao motorista escolher um dos veículos cadastrados no sistema SCL que já foram baixados para o dispositivo.",
+        "title": "Veículo",      
+        "content": "A tela de pré-coleta permite ao motorista escolher um dos veículos cadastrados no sistema SCL que já foram baixados para o dispositivo. o usuário pode buscar um veículo cadastrado através da placa ou modelo do veículo",
         "lightbox": [
             {
-                "image": "assets/images/pre_coleta.png",
-                "title": "Tela de Pré-Coleta"
+                "image": "assets/images/popup_veiculo.png",
+                "title": "Escolha de veículos"
+            },
+            {
+                "image": "assets/images/popup_veiculo_filtro.png",
+                "title": "Escolha de veículos"
             }
         ]
     }
