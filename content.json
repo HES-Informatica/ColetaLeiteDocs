@@ -126,8 +126,8 @@
         ]
     },
     {
-        "id": "3.1",     
-        "title": "Veículo",      
+        "id": "3.1",
+        "title": "Veículo",
         "content": "A tela de pré-coleta permite ao motorista escolher um dos veículos cadastrados no sistema SCL que já foram baixados para o dispositivo. o usuário pode buscar um veículo cadastrado através da placa ou modelo do veículo",
         "lightbox": [
             {
@@ -136,6 +136,27 @@
             },
             {
                 "image": "assets/images/popup_veiculo_filtro.png",
+                "title": "Escolha de veículos"
+            }
+        ]
+    },
+    {
+        "id": "3.2",
+        "title": "Odômetro",
+        "info": "Odômetro, apesar de não ser obrigatório o preenchimento, é interessante que seja preenchido sempre que possível."
+    },
+    {
+        "id": "4",
+        "icon": "fa fa-road",
+        "title": "Linhas",
+        "content": "A tela de linhas é dividida em 2 ou 3 abas. A primeira aba contém as linhas recentes. A segunda aba contém todas as linhas a qual o motorista possui acesso. A última aba contém todas as linhas cadastradas no sistema.",
+        "lightbox": [
+            {
+                "image": "assets/images/linhas.png",
+                "title": "Escolha de veículos"
+            },
+            {
+                "image": "assets/images/linhas_todas.png",
                 "title": "Escolha de veículos"
             }
         ]

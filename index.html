@@ -161,6 +161,21 @@
 							</div>
 							<!--//content-->
 						</div>
+
+						<div v-if="item.info && item.info != ''" class="callout-block callout-block-info me-1">
+							<div class="content">
+								<h4 class="callout-title">
+									<span class="callout-icon-holder">
+										<i class="fas fa-circle-info"></i>
+									</span>
+									<!--//icon-holder-->
+									Observação: 
+								</h4>
+								<p v-html="item.info"></p>
+							</div>
+							<!--//content-->
+						</div>
+
 						<p v-html="item.aftercontent"></p>
 
 					</section>
