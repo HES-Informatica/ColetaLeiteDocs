@@ -18,12 +18,12 @@ window.onresize = function () {
 	responsiveSidebar();
 };
 
-window.search = function (form) { 
+window.search = function (form) {
 	window.find(form.children[0].value);
 	return false;
 };
-	// window.find(document.getElementById('searchFieldSidebar').value)
- 
+// window.find(document.getElementById('searchFieldSidebar').value)
+
 
 
 function responsiveSidebar() {
@@ -96,7 +96,15 @@ var spy = new Gumshoe('#docs-nav a', {
 /* ====== SimpleLightbox Plugin ======= */
 /*  Ref: https://github.com/andreknieriem/simplelightbox */
 
-var lightbox = new SimpleLightbox('.simplelightbox-gallery a', {/* options */ });
+var lightboxes = [];
+
+for (let index = 0; index < 999; index++) { //TODO: melhorar isso aqui
+	if (document.querySelector(`.simplelightbox-gallery-${index}`))
+		lightboxes.push(new SimpleLightbox(`.simplelightbox-gallery-${index} a`, {/* options */ }));
+
+}
+
+
 
 
 
