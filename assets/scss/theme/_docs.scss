@@ -279,15 +279,21 @@
 		font-weight: normal;
 		color: lighten($theme-text-color-secondary, 10%);
 	}
+
 	.docs-section {
 		margin-bottom: 2rem 0;
 		border-bottom: 1px solid $theme-divider;
 		scroll-margin-top: 69px; //height of the sticky header
 		scroll-snap-margin-top: 69px; //Safari 
 		p {
+			 
+
 			&:last-child {
 				margin-bottom: 0;
 			}
+		}
+		figure{
+			margin-top:20px;
 		}
 		
 	}

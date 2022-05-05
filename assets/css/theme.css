@@ -11385,6 +11385,9 @@ a.text-link:hover {
 .docs-article .docs-section p:last-child {
   margin-bottom: 0;
 }
+.docs-article .docs-section figure {
+  margin-top: 20px;
+}
 .docs-article .section-heading {
   font-size: 1.875rem;
   color: #252930;

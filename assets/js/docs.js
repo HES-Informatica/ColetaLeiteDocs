@@ -23,6 +23,24 @@ function parseHTML(html) {
 	return el.childNodes;
 }
 
+function search(filter) {
+	var   root, articles, section, i, txtValue; 
+	filter = filter.toUpperCase();
+	root = document.getElementById("app");
+	articles = root.getElementsByTagName("article");
+	for (i = 0; i < articles.length; i++) {
+	  section = articles[i].getElementsByTagName("section")[0];
+	  if (section) {
+		txtValue = section.textContent || section.innerText;
+		if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		  articles[i].style.display = "";
+		} else {
+		  articles[i].style.display = "none";
+		}
+	  }       
+	}
+  }
+
 
 async function getContent() {
 	var json = await getJson('content.json');
@@ -73,7 +91,9 @@ getContent().then((json) => {
 				document.querySelectorAll(".search-form").forEach(function (x) {
 					x.addEventListener('submit', function (event) {
 						event.preventDefault();
-						window.find(x.children[0].value);
+						var v = x.children[0].value
+						search(v)
+						window.find(v);
 					})
 				})
 

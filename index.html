@@ -132,7 +132,7 @@
 							v-bind:id="'item-' + fixId(item.id)">
 							<div v-html="item.content"></div>
 						 
-							<div :class="'simplelightbox-gallery-' + fixId(item.id)" class="row mb-3">
+							<figure :class="'simplelightbox-gallery-' + fixId(item.id)" class="row mb-3">
 								<div class="col-12 col-md-4 mb-3" v-if="item.lightbox" v-for="img in item.lightbox">
 									<a v-bind:href="img.image">
 										<img class="figure-img img-fluid shadow rounded print-app"
@@ -140,7 +140,7 @@
 									</a>
 								</div>
 
-							</div>
+							</figure>
 
 							<div v-if="item.danger && item.danger != ''"
 								class="callout-block callout-block-danger me-1">
