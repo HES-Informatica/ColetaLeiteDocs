@@ -203,6 +203,32 @@
             "id": "4.1",
             "title": "Entendendo as Linhas",
             "aftercontentfile": "entendendo_linhas.md"
+        },
+        {
+            "id": "5",
+            "icon": "fa fa-tank-water",
+            "title": "Linhas",
+            "content": "A tela de linhas é dividida em 2 ou 3 abas. A primeira aba contém as linhas recentes. A segunda aba contém todas as linhas a qual o motorista possui acesso. A última aba contém todas as linhas cadastradas no sistema.",
+            "info": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador",
+            "lightbox": [
+                {
+                    "image": "assets/images/linhas.png",
+                    "title": "Linhas Recentes"
+                },
+                {
+                    "image": "assets/images/linhas_aberta.png",
+                    "title": "Linha aberta"
+                },
+                {
+                    "image": "assets/images/linhas_todas.png",
+                    "title": "Todas as Linhas"
+                }
+            ]
+        },
+        {
+            "id": "5.1",
+            "title": "Entendendo os Tanques",
+            "aftercontentfile": "tanques.md"
         }
     ]
 }

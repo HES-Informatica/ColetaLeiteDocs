@@ -1,5 +1,5 @@
 "use strict";
- 
+
 
 var lightboxes = [];
 const sass = new Sass();
@@ -22,30 +22,25 @@ function parseHTML(html) {
 
 window.search = function (filter, keep) {
 
-	var root, articles, section, i, txtValue;
+	var root, articles, i, txtValue;
 	filter = filter.toUpperCase();
 	root = document.getElementById("app");
 	articles = root.getElementsByTagName("article");
 	for (i = 0; i < articles.length; i++) {
-		section = articles[i].getElementsByTagName("section")[0];
-		if (section) {
-			txtValue = section.textContent || section.innerText;
-			var containsSearch = txtValue.toUpperCase().indexOf(filter) > -1;
-			articles[i].style.display = '';
-			if (keep) {
-				if (containsSearch) {
-					articles[i].style.opacity = 1;
+		let article = articles[i];
+		txtValue = article.textContent || article.innerText || "";
+		var containsSearch = txtValue.toUpperCase().indexOf(filter) > -1;
+
+		article.style.display = '';
+		article.style.opacity = 1;
+		if (txtValue != "")
+			if (!containsSearch) {
+				if (keep) {
+					article.style.opacity = 0.1;
 				} else {
-					articles[i].style.opacity = 0.1;
+					article.style.display = 'none';
 				}
-			} else {
-				if (!containsSearch)
-					articles[i].style.display = 'none';
-
 			}
-
-
-		}
 	}
 
 }
