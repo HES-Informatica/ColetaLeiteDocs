@@ -225,16 +225,16 @@
         },
         {
             "id": "5.2",
-            "title": "Coletando dados",
-            "content": "A tela de tanques possui o layout parecido com a tela de Linhas, mas seus ícones trazem outras informações",
-            "info": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador",
+            "title": "Acessando um Tanque por QR Code",
+            "content": "Se o tanque possuir um QR Code, o motorista pode acessar o formulario de coleta deste tanque diretamente. Para acessar o scanner toque em <img src='assets/images/qrcode.png' class='botao-app' />",            
+            "aftercontent":"Aponte a camera do celular para o QR Code. Se a leitura for bem sucedida o formulario de coleta abrira automaticamente",
             "lightbox": [
                 {
-                    "image": "assets/images/tanques.png",
-                    "title": "Linhas Recentes"
+                    "image": "assets/images/qr_code.png",
+                    "title": "Tela de Scanner de QR Code"
                 }
                 
             ]
-        },
+        }
     ]
 }
