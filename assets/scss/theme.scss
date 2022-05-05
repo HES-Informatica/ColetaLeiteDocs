@@ -58,9 +58,9 @@ $warning: $theme-warning-color;
 $info: $theme-info-color;
 
 /*************************** Import Bootstrap  *****************************/
-@import "/assets/bootstrap/scss/bootstrap.scss";
+@import "bootstrap/scss/bootstrap.scss";
 
 
 /*************************** Theme Styles Section ****************************/
-@import "/assets/theme/styles.scss"
+@import "theme/styles.scss"
 

@@ -19,7 +19,7 @@
             "id": "intro",
             "icon": "fas fa-mobile",
             "title": "Introdução",
-            "date": "04/05/2022",            
+            "date": "04/05/2022",
             "content": "Aplicação focada na coleta de leite dos carreteiros, passando pelas linhas de coleta, pegando informações dos tanques e do leite coletado atualmente.",
             "lightbox": []
         },
@@ -30,6 +30,10 @@
             "date": "04/05/2022",
             "content": "O menu de engrenagem <img class=\"botao-app\" src=\"assets/images/botao_engrenagem.png\"  /> contém as configurações básicas de funcionamento do App",
             "lightbox": [
+                {
+                    "image": "assets/images/login.png",
+                    "title": "Tela de login"
+                },
                 {
                     "image": "assets/images/login_menu.png",
                     "title": "Tela de login com menu aberto"
@@ -61,7 +65,7 @@
             "id": "1.2",
             "title": "Branding/logo",
             "date": "04/05/2022",
-            "content": "Apesar de opcional, esta configuração é interessante para o cliente pois aplica a marca dele no aplicativo. Esta configuração está disponível no menu da engrenagem, na tela de login.        Seu ícone é representado por uma imagem.<br /><img class='botao-app' src='assets/images/BOTAO_IMAGEM.png'   />",
+            "content": "![logo](assets/images/logo.png)<br></br>Apesar de opcional, esta configuração é interessante para o cliente pois aplica a marca dele no aplicativo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma imagem.<br /><img class='botao-app' src='assets/images/BOTAO_IMAGEM.png'   />",
             "warning": "Esta configuraçao necessita da senha administrativa para ser alterada. Se voce nao e um administrador do aplicativo, contate um representante H&S.",
             "aftercontent": "Ao inserir a senha, você poderá escolher uma imagem PNG do logo do cliente. Esta imagem <b>substituirá</b> a imagem padrão do aplicativo",
             "lightbox": [
@@ -183,19 +187,22 @@
             "lightbox": [
                 {
                     "image": "assets/images/linhas.png",
-                    "title": "Escolha de veículos"
+                    "title": "Linhas Recentes"
+                },
+                {
+                    "image": "assets/images/linhas_aberta.png",
+                    "title": "Linha aberta"
                 },
                 {
                     "image": "assets/images/linhas_todas.png",
-                    "title": "Escolha de veículos"
+                    "title": "Todas as Linhas"
                 }
             ]
         },
         {
-            "id": "4.1",            
+            "id": "4.1",
             "title": "Entendendo as Linhas",
-            "contentfile": "entendendo_linhas.md"
-             
-        }       
+            "aftercontentfile": "entendendo_linhas.md"
+        }
     ]
 }

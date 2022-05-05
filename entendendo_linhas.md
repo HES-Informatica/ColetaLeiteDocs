@@ -1,4 +1,6 @@
-<!-- ![MarineGEO circle logo](/assets/images/login.png "MarineGEO logo") -->
+ 
+
+<!-- <img src="assets/images/descricao_linha.png" alt="drawing" width="80%"/> -->
 
 1. Linha Aberta: Quando preenchida indica que uma coleta nesta linha foi iniciada
   

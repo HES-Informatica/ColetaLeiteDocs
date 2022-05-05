@@ -1,3 +1,7 @@
+.botao-app {
+	width: 30px;
+}
+
 .main-search-box {
 	max-width: 600px;
 }
@@ -247,7 +251,7 @@
 
 .docs-content {
 	margin-left: 300px;
-	padding-bottom: 500px;
+	// padding-bottom: 500px;
 }
 
 
@@ -261,7 +265,7 @@
 	}
 	.docs-heading {
 		font-size: 3rem;
-		margin-bottom: 2rem;
+		// margin-bottom: 2rem;
 		position: relative;
 		
 	}
@@ -276,7 +280,7 @@
 		color: lighten($theme-text-color-secondary, 10%);
 	}
 	.docs-section {
-		padding: 2rem 0;
+		margin-bottom: 2rem 0;
 		border-bottom: 1px solid $theme-divider;
 		scroll-margin-top: 69px; //height of the sticky header
 		scroll-snap-margin-top: 69px; //Safari 
@@ -290,7 +294,7 @@
 	
 	.section-heading {
 		font-size: 1.875rem;
-		margin-bottom: 1rem;
+		// margin-bottom: 20px;
 		color: $theme-text-color-primary
 	}
 	h2 {

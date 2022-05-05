@@ -11103,6 +11103,10 @@ a.text-link:hover {
   font-size: 1.125rem;
 }
 
+.botao-app {
+  width: 30px;
+}
+
 .main-search-box {
   max-width: 600px;
 }
@@ -11348,7 +11352,6 @@ a.text-link:hover {
 
 .docs-content {
   margin-left: 300px;
-  padding-bottom: 500px;
 }
 
 .docs-article {
@@ -11362,7 +11365,6 @@ a.text-link:hover {
 }
 .docs-article .docs-heading {
   font-size: 3rem;
-  margin-bottom: 2rem;
   position: relative;
 }
 .docs-article .docs-time {
@@ -11375,7 +11377,7 @@ a.text-link:hover {
   color: #747f94;
 }
 .docs-article .docs-section {
-  padding: 2rem 0;
+  margin-bottom: 2rem 0;
   border-bottom: 1px solid #e7e9ed;
   scroll-margin-top: 69px;
   scroll-snap-margin-top: 69px;
@@ -11385,7 +11387,6 @@ a.text-link:hover {
 }
 .docs-article .section-heading {
   font-size: 1.875rem;
-  margin-bottom: 1rem;
   color: #252930;
 }
 .docs-article h2, .docs-article .h2 {

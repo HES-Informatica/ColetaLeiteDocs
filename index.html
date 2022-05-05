@@ -27,18 +27,7 @@
 	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 
 
- 
-	<style>
-		.botao-app {
-			width: 50px;
-			margin: 10px 0px;
-
-		}
-
-		.print-app {
-			width: 80% !important;
-		}
-	</style>
+  
 
 </head>
 
@@ -132,17 +121,17 @@
 
 					<article v-for="item in data.content" class="docs-article" v-bind:id="'section-' + fixId(item.id)">
 						<header class="docs-header">
+							<span class="docs-time" v-if="item.date && item.date != ''">Atualizado em: {{item.date}}</span>
 							<component :is="headerType(item.id)"
 								:class="{'docs-heading': (headerType(item.id) =='h1'), 'section-heading': (headerType(item.id) =='h2') }">
-								<span v-if="item.title" v-html="item.title"></span><span class="docs-time"
-									v-if="item.date && item.date != ''">Atualizado em:
-									{{item.date}}</span>
+								<span v-if="item.title" v-html="item.title"></span>
 							</component>
 						</header>
 						<section
 							:class="{'docs-intro': (headerType(item.id) =='h1'), 'docs-section': (headerType(item.id) =='h2') }"
 							v-bind:id="'item-' + fixId(item.id)">
-							<p v-html="item.content"></p>
+							<div v-html="item.content"></div>
+						 
 							<div :class="'simplelightbox-gallery-' + fixId(item.id)" class="row mb-3">
 								<div class="col-12 col-md-4 mb-3" v-if="item.lightbox" v-for="img in item.lightbox">
 									<a v-bind:href="img.image">
@@ -197,7 +186,7 @@
 								<!--//content-->
 							</div>
 
-							<p v-html="item.aftercontent"></p>
+							<div v-html="item.aftercontent"></div>
 
 						</section>
 					</article>

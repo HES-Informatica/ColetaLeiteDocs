@@ -43,7 +43,7 @@ async function getContent() {
 
 
 		if (item.aftercontentfile) {
-			item.aftercontentfile = await getText(item.aftercontentfile);
+			item.aftercontent = await getText(item.aftercontentfile);
 		}
 
 		if (item.aftercontent)
@@ -58,7 +58,7 @@ async function getContent() {
 		if (item.danger)
 			item.danger = marked.parse(item.danger ?? "");
 
-		console.log(item);
+		 
 	}
 
 	return json;
@@ -175,14 +175,12 @@ function responsiveSidebar() {
 	let sidebar = document.getElementById('docs-sidebar');
 	let w = window.innerWidth;
 	if (w >= 1200) {
-		// if larger 
-		console.log('larger');
+		// if larger 	
 		sidebar.classList.remove('sidebar-hidden');
 		sidebar.classList.add('sidebar-visible');
 
 	} else {
-		// if smaller
-		console.log('smaller');
+		// if smaller	
 		sidebar.classList.remove('sidebar-visible');
 		sidebar.classList.add('sidebar-hidden');
 	}
