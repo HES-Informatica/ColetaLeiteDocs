@@ -206,29 +206,35 @@
         },
         {
             "id": "5",
-            "icon": "fa fa-tank-water",
-            "title": "Linhas",
-            "content": "A tela de linhas é dividida em 2 ou 3 abas. A primeira aba contém as linhas recentes. A segunda aba contém todas as linhas a qual o motorista possui acesso. A última aba contém todas as linhas cadastradas no sistema.",
+            "icon": "fa-solid fa-glass-water-droplet",
+            "title": "Tanques",
+            "content": "A tela de tanques possui o layout parecido com a tela de Linhas, mas seus ícones trazem outras informações",
             "info": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador",
             "lightbox": [
                 {
-                    "image": "assets/images/linhas.png",
+                    "image": "assets/images/tanques.png",
                     "title": "Linhas Recentes"
-                },
-                {
-                    "image": "assets/images/linhas_aberta.png",
-                    "title": "Linha aberta"
-                },
-                {
-                    "image": "assets/images/linhas_todas.png",
-                    "title": "Todas as Linhas"
                 }
+                
             ]
         },
         {
             "id": "5.1",
             "title": "Entendendo os Tanques",
-            "aftercontentfile": "tanques.md"
-        }
+            "aftercontentfile": "entendendo_tanques.md"
+        },
+        {
+            "id": "5.2",
+            "title": "Coletando dados",
+            "content": "A tela de tanques possui o layout parecido com a tela de Linhas, mas seus ícones trazem outras informações",
+            "info": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador",
+            "lightbox": [
+                {
+                    "image": "assets/images/tanques.png",
+                    "title": "Linhas Recentes"
+                }
+                
+            ]
+        },
     ]
 }

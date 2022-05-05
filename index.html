@@ -27,7 +27,7 @@
 	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 
 
-  
+
 
 </head>
 
@@ -50,7 +50,7 @@
 
 								</span>
 
-									<!-- Coleta<span class="text-alt">Leite!</span></span> -->
+								<!-- Coleta<span class="text-alt">Leite!</span></span> -->
 							</a>
 						</div>
 					</div>
@@ -97,7 +97,7 @@
 				<nav id="docs-nav" class="docs-nav navbar">
 					<ul class="section-items list-unstyled nav flex-column pb-3">
 						<template v-for="item in data.content">
-							<li v-if="headerType(item.id) =='h1'" class="nav-item section-title mt-3">
+							<li :id="'menu-section-' + fixId(item.id)" v-if="headerType(item.id) =='h1'" class="nav-item section-title mt-3">
 								<a class="nav-link scrollto" :href="'#section-'+ fixId(item.id)">
 									<span v-if="item.icon" class="theme-icon-holder me-2">
 										<i :class="item.icon"></i>
@@ -105,7 +105,7 @@
 									{{item.title}}
 								</a>
 							</li>
-							<li v-else class="nav-item">
+							<li :id="'menu-item-' + fixId(item.id)" v-else class="nav-item">
 								<a class="nav-link scrollto" :href="'#item-'+ fixId(item.id)">{{item.title}}</a>
 							</li>
 						</template>
@@ -121,17 +121,22 @@
 
 					<article v-for="item in data.content" class="docs-article" v-bind:id="'section-' + fixId(item.id)">
 						<header class="docs-header">
-							<span class="docs-time" v-if="item.date && item.date != ''">Atualizado em: {{item.date}}</span>
 							<component :is="headerType(item.id)"
 								:class="{'docs-heading': (headerType(item.id) =='h1'), 'section-heading': (headerType(item.id) =='h2') }">
-								<span v-if="item.title" v-html="item.title"></span>
+								<i style="margin-right:15px" v-if="item.icon" class="text-primary" :class="item.icon"></i>
+								<span  v-if="item.title" v-html="item.title"></span>
 							</component>
+							<small  v-if="item.date && item.date != ''">Atualizado em: {{item.date}}
+								<br/>
+								<br/>
+							</small>
+							
 						</header>
 						<section
 							:class="{'docs-intro': (headerType(item.id) =='h1'), 'docs-section': (headerType(item.id) =='h2') }"
 							v-bind:id="'item-' + fixId(item.id)">
-							<div v-html="item.content"></div>
-						 
+							<p v-html="item.content"></p>
+
 							<figure :class="'simplelightbox-gallery-' + fixId(item.id)" class="row mb-3">
 								<div class="col-12 col-md-4 mb-3" v-if="item.lightbox" v-for="img in item.lightbox">
 									<a v-bind:href="img.image">
@@ -186,7 +191,7 @@
 								<!--//content-->
 							</div>
 
-							<div v-html="item.aftercontent"></div>
+							<p v-html="item.aftercontent"></p>
 
 						</section>
 					</article>
@@ -202,8 +207,7 @@
 			<div class="footer-bottom text-center py-5">
 
 				<ul class="social-list list-unstyled pb-4 mb-0">
-					<li v-if="data.social" v-for="soc in data.social" class="list-inline-item"><a :href="soc.url"><i
-								:class="soc.icon" class="  fa-fw"></i></a></li>
+					<li v-if="data.social" v-for="soc in data.social" class="list-inline-item"><a :href="soc.url"><i :class="soc.icon" class="  fa-fw"></i></a></li>
 				</ul>
 				<!--//social-list-->
 

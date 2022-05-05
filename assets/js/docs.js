@@ -26,19 +26,31 @@ window.search = function (filter, keep) {
 	filter = filter.toUpperCase();
 	root = document.getElementById("app");
 	articles = root.getElementsByTagName("article");
+
+
+
 	for (i = 0; i < articles.length; i++) {
 		let article = articles[i];
 		txtValue = article.textContent || article.innerText || "";
 		var containsSearch = txtValue.toUpperCase().indexOf(filter) > -1;
+		var section = article.getElementsByTagName('section')[0];
+		var menu = document.getElementById("menu-" + article.id) || document.getElementById("menu-" + section.id) ;
+
+	 
 
 		article.style.display = '';
 		article.style.opacity = 1;
+		menu.style.display = '';
+		menu.style.opacity = 1;
+
 		if (txtValue != "")
 			if (!containsSearch) {
 				if (keep) {
 					article.style.opacity = 0.1;
+					menu.style.opacity = 0.1;
 				} else {
 					article.style.display = 'none';
+					menu.style.display = 'none';
 				}
 			}
 	}
@@ -50,8 +62,8 @@ async function getContent() {
 	var json = await getJson('content.json');
 
 	if (json.title) {
-		json.title = marked.parse(json.title ?? "");
-		json.title = parseHTML(json.title)[0].innerHTML;
+		json.title = marked.parseInline(json.title ?? "");
+
 	}
 	for (let index = 0; index < json.content.length; index++) {
 		let item = json.content[index];
