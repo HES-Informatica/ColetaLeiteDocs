@@ -156,7 +156,8 @@
                     "image": "assets/images/pre_coleta.png",
                     "title": "Tela de Pré-Coleta"
                 }
-            ]
+            ],
+            "info":"Voce pode fazer logoff na tela de pre-coleta tocando em <img src='assets/images/sair.png' class='botao-app' />"
         },
         {
             "id": "3.1",
