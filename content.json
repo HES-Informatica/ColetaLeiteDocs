@@ -19,8 +19,8 @@
             "id": "intro",
             "icon": "fas fa-mobile",
             "title": "Introdução",
-            "date": "04/05/2022",
-            "contentfile":"license.txt",
+            "date": "04/05/2022",            
+            "content": "Aplicação focada na coleta de leite dos carreteiros, passando pelas linhas de coleta, pegando informações dos tanques e do leite coletado atualmente.",
             "lightbox": []
         },
         {
@@ -194,17 +194,8 @@
         {
             "id": "4.1",            
             "title": "Entendendo as Linhas",
-            "content": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador",
-            "lightbox": [
-                {
-                    "image": "assets/images/linhas.png",
-                    "title": "Escolha de veículos"
-                },
-                {
-                    "image": "assets/images/linhas_todas.png",
-                    "title": "Escolha de veículos"
-                }
-            ]
-        }
+            "contentfile": "entendendo_linhas.md"
+             
+        }       
     ]
 }
