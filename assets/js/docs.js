@@ -1,8 +1,5 @@
 "use strict";
-
-
-
-
+ 
 
 var lightboxes = [];
 const sass = new Sass();
@@ -23,23 +20,35 @@ function parseHTML(html) {
 	return el.childNodes;
 }
 
-function search(filter) {
-	var   root, articles, section, i, txtValue; 
+window.search = function (filter, keep) {
+
+	var root, articles, section, i, txtValue;
 	filter = filter.toUpperCase();
 	root = document.getElementById("app");
 	articles = root.getElementsByTagName("article");
 	for (i = 0; i < articles.length; i++) {
-	  section = articles[i].getElementsByTagName("section")[0];
-	  if (section) {
-		txtValue = section.textContent || section.innerText;
-		if (txtValue.toUpperCase().indexOf(filter) > -1) {
-		  articles[i].style.display = "";
-		} else {
-		  articles[i].style.display = "none";
+		section = articles[i].getElementsByTagName("section")[0];
+		if (section) {
+			txtValue = section.textContent || section.innerText;
+			var containsSearch = txtValue.toUpperCase().indexOf(filter) > -1;
+			articles[i].style.display = '';
+			if (keep) {
+				if (containsSearch) {
+					articles[i].style.opacity = 1;
+				} else {
+					articles[i].style.opacity = 0.1;
+				}
+			} else {
+				if (!containsSearch)
+					articles[i].style.display = 'none';
+
+			}
+
+
 		}
-	  }       
 	}
-  }
+
+}
 
 
 async function getContent() {
@@ -76,7 +85,7 @@ async function getContent() {
 		if (item.danger)
 			item.danger = marked.parse(item.danger ?? "");
 
-		 
+
 	}
 
 	return json;
@@ -89,11 +98,15 @@ getContent().then((json) => {
 			this.$nextTick(function () {
 
 				document.querySelectorAll(".search-form").forEach(function (x) {
+
+					x.children[0].addEventListener('keydown', function (event) {
+						window.search(this.value, true);
+					})
 					x.addEventListener('submit', function (event) {
 						event.preventDefault();
-						var v = x.children[0].value
-						search(v)
-						window.find(v);
+						window.search(x.children[0].value, false);
+						window.find(x.children[0].value);
+
 					})
 				})
 
