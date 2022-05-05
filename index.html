@@ -27,6 +27,7 @@
 	<link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 
 
+ 
 	<style>
 		.botao-app {
 			width: 50px;
@@ -37,162 +38,203 @@
 		.print-app {
 			width: 80% !important;
 		}
-
-		 
 	</style>
 
 </head>
 
-<body class="docs-page">
-	<header class="header fixed-top">
-		<div class="branding docs-branding">
-			<div class="container-fluid position-relative py-2">
-				<div class="docs-logo-wrapper">
-					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none"
-						type="button">
-						<span></span>
-						<span></span>
-						<span></span>
-					</button>
-					<div class="site-logo"><a class="navbar-brand" href="index.html">
-							<img class="logo-icon me-2" src="assets/images/AppColeta.png" style="height: 50px;"
-								alt="logo" />
-							<span class="logo-text">Coleta<span class="text-alt">Leite!</span></span></a>
-					</div>
-				</div>
-				<!--//docs-logo-wrapper-->
-				<div class="docs-top-utilities d-flex justify-content-end align-items-center">
-					<div class="top-search-box d-none d-lg-flex">
-						<form onsubmit="return window.search(this)" class="search-form">
-							<input type="text" placeholder="Buscar na documentação" name="search"
-								class="form-control search-input">
-							<button type="submit" class="btn search-btn" value="Pesquisar"><i
-									class="fas fa-search"></i></button>
-						</form>
-					</div>
+<body>
 
-					<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
-						<li class="list-inline-item"><a href="hes-informatica.github.io"><i class="fab fa-github fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="hes.com.br"><i class="fa fa-globe fa-fw"></i></a></li>
-						<!-- <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-slack fa-fw"></i></a></li>
-						<li class="list-inline-item"><a href="#"><i class="fab fa-product-hunt fa-fw"></i></a></li> -->
-					</ul>
-					<!--//social-list-->
-					<a href="javascript:alert('Ainda Não')" class="btn btn-primary d-none d-lg-flex">Download</a>
-				</div>
-				<!--//docs-top-utilities-->
-			</div>
-			<!--//container-->
-		</div>
-		<!--//branding-->
-	</header>
-	<!--//header-->
+	<div class="docs-page" id="app">
+		<header class="header fixed-top">
+			<div class="branding docs-branding">
+				<div class="container-fluid position-relative py-2">
+					<div class="docs-logo-wrapper">
+						<button id="docs-sidebar-toggler"
+							class="docs-sidebar-toggler docs-sidebar-visible me-2 d-xl-none" type="button">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+						<div class="site-logo"><a class="navbar-brand" href="index.html">
+								<img class="logo-icon me-2" :src="data.logo" style="max-height: 50px;" alt="logo" />
+								<span class="logo-text" v-html="data.title">
 
-
-	<div class="docs-wrapper" id="app">
-		<div id="docs-sidebar" class="docs-sidebar">
-			<div class="top-search-box d-lg-none p-3">
-				<form onsubmit="return window.search(this)" class="search-form">
-					<input type="text" placeholder="Buscar na documentação" name="search"
-						class="form-control search-input">
-					<button type="submit" class="btn search-btn" value="Pesquisar"><i
-							class="fas fa-search"></i></button>
-				</form>
-			</div>
-			<nav id="docs-nav" class="docs-nav navbar">
-				<ul class="section-items list-unstyled nav flex-column pb-3">
-					<template v-for="item in data">
-						<li v-if="headerType(item.id) =='h1'" class="nav-item section-title mt-3">
-							<a class="nav-link scrollto" :href="'#section-'+ fixId(item.id)">
-								<span v-if="item.icon" class="theme-icon-holder me-2">
-									<i :class="item.icon"></i>
 								</span>
-								{{item.title}}
+
+									<!-- Coleta<span class="text-alt">Leite!</span></span> -->
 							</a>
-						</li>
-						<li v-else class="nav-item">
-							<a class="nav-link scrollto" :href="'#item-'+ fixId(item.id)">{{item.title}}</a>
-						</li>
-					</template>
-				</ul>
-			
-			</nav>
-			<!--//docs-nav-->
-		</div>
-		<!--//docs-sidebar-->
-		<div class="docs-content">
+						</div>
+					</div>
+					<!--//docs-logo-wrapper-->
+					<div class="docs-top-utilities d-flex justify-content-end align-items-center">
+						<div class="top-search-box d-none d-lg-flex">
+							<form class="search-form">
+								<input type="text" placeholder="Buscar na documentação" name="search"
+									class="form-control search-input">
+								<button type="submit" class="btn search-btn" value="Pesquisar"><i
+										class="fas fa-search"></i></button>
+							</form>
+						</div>
 
-			<div class="container">
+						<ul class="social-list list-inline mx-md-3 mx-lg-5 mb-0 d-none d-lg-flex">
+							<li v-if="data.social" v-for="soc in data.social" class="list-inline-item"><a
+									:href="soc.url" title="soc.name"><i :class="soc.icon" class="fa-fw"></i></a></li>
 
-				<article v-for="item in data" class="docs-article" v-bind:id="'section-' + fixId(item.id)">
-					<header class="docs-header">
-						<component :is="headerType(item.id)"
-							:class="{'docs-heading': (headerType(item.id) =='h1'), 'section-heading': (headerType(item.id) =='h2') }">
-							<span v-if="item.title" v-html="item.title"></span><span class="docs-time"
-								v-if="item.date && item.date != ''">Atualizado em:
-								{{item.date}}</span>
-						</component>
-					</header>
-					<section
-						:class="{'docs-intro': (headerType(item.id) =='h1'), 'docs-section': (headerType(item.id) =='h2') }"
-						v-bind:id="'item-' + fixId(item.id)">
-						<p v-html="item.content"></p>
-						<div :class="'simplelightbox-gallery-' + fixId(item.id)" class="row mb-3">
-							<div class="col-12 col-md-4 mb-3" v-if="item.lightbox" v-for="img in item.lightbox">
-								<a v-bind:href="img.image">
-									<img class="figure-img img-fluid shadow rounded print-app" v-bind:src="img.image"
-										alt="" v-bind:title="img.title" />
+
+						</ul>
+						<!--//social-list-->
+						<a v-if="data.downloadbutton" :href="data.downloadbutton"
+							class="btn btn-primary d-none d-lg-flex">Download</a>
+					</div>
+					<!--//docs-top-utilities-->
+				</div>
+				<!--//container-->
+			</div>
+			<!--//branding-->
+		</header>
+		<!--//header-->
+
+
+		<div class="docs-wrapper">
+			<div id="docs-sidebar" class="docs-sidebar">
+				<div class="top-search-box d-lg-none p-3">
+					<form class="search-form">
+						<input type="text" placeholder="Buscar na documentação" name="search"
+							class="form-control search-input">
+						<button type="submit" class="btn search-btn" value="Pesquisar"><i
+								class="fas fa-search"></i></button>
+					</form>
+				</div>
+				<nav id="docs-nav" class="docs-nav navbar">
+					<ul class="section-items list-unstyled nav flex-column pb-3">
+						<template v-for="item in data.content">
+							<li v-if="headerType(item.id) =='h1'" class="nav-item section-title mt-3">
+								<a class="nav-link scrollto" :href="'#section-'+ fixId(item.id)">
+									<span v-if="item.icon" class="theme-icon-holder me-2">
+										<i :class="item.icon"></i>
+									</span>
+									{{item.title}}
 								</a>
+							</li>
+							<li v-else class="nav-item">
+								<a class="nav-link scrollto" :href="'#item-'+ fixId(item.id)">{{item.title}}</a>
+							</li>
+						</template>
+					</ul>
+
+				</nav>
+				<!--//docs-nav-->
+			</div>
+			<!--//docs-sidebar-->
+			<div class="docs-content">
+
+				<div class="container">
+
+					<article v-for="item in data.content" class="docs-article" v-bind:id="'section-' + fixId(item.id)">
+						<header class="docs-header">
+							<component :is="headerType(item.id)"
+								:class="{'docs-heading': (headerType(item.id) =='h1'), 'section-heading': (headerType(item.id) =='h2') }">
+								<span v-if="item.title" v-html="item.title"></span><span class="docs-time"
+									v-if="item.date && item.date != ''">Atualizado em:
+									{{item.date}}</span>
+							</component>
+						</header>
+						<section
+							:class="{'docs-intro': (headerType(item.id) =='h1'), 'docs-section': (headerType(item.id) =='h2') }"
+							v-bind:id="'item-' + fixId(item.id)">
+							<p v-html="item.content"></p>
+							<div :class="'simplelightbox-gallery-' + fixId(item.id)" class="row mb-3">
+								<div class="col-12 col-md-4 mb-3" v-if="item.lightbox" v-for="img in item.lightbox">
+									<a v-bind:href="img.image">
+										<img class="figure-img img-fluid shadow rounded print-app"
+											v-bind:src="img.image" alt="" v-bind:title="img.title" />
+									</a>
+								</div>
+
 							</div>
-						 
-						</div>
 
-						<div v-if="item.warning && item.warning != ''" class="callout-block callout-block-warning me-1">
-							<div class="content">
-								<h4 class="callout-title">
-									<span class="callout-icon-holder">
-										<i class="fas fa-exclamation-triangle"></i>
-									</span>
-									<!--//icon-holder-->
-									Atenção
-								</h4>
-								<p v-html="item.warning"></p>
+							<div v-if="item.danger && item.danger != ''"
+								class="callout-block callout-block-danger me-1">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder">
+											<i class="fa fa-solid fa-circle-xmark"></i>
+										</span>
+										<!--//icon-holder-->
+										Atenção
+									</h4>
+									<p v-html="item.danger"></p>
+								</div>
+								<!--//content-->
 							</div>
-							<!--//content-->
-						</div>
 
-						<div v-if="item.info && item.info != ''" class="callout-block callout-block-info me-1">
-							<div class="content">
-								<h4 class="callout-title">
-									<span class="callout-icon-holder">
-										<i class="fas fa-circle-info"></i>
-									</span>
-									<!--//icon-holder-->
-									Observação: 
-								</h4>
-								<p v-html="item.info"></p>
+							<div v-if="item.warning && item.warning != ''"
+								class="callout-block callout-block-warning me-1">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder">
+											<i class="fas fa-exclamation-triangle"></i>
+										</span>
+										<!--//icon-holder-->
+										Atenção
+									</h4>
+									<p v-html="item.warning"></p>
+								</div>
+								<!--//content-->
 							</div>
-							<!--//content-->
-						</div>
 
-						<p v-html="item.aftercontent"></p>
+							<div v-if="item.info && item.info != ''" class="callout-block callout-block-info me-1">
+								<div class="content">
+									<h4 class="callout-title">
+										<span class="callout-icon-holder">
+											<i class="fas fa-circle-info"></i>
+										</span>
+										<!--//icon-holder-->
+										Observação:
+									</h4>
+									<p v-html="item.info"></p>
+								</div>
+								<!--//content-->
+							</div>
 
-					</section>
-				</article>
-				<!--//col-->
+							<p v-html="item.aftercontent"></p>
+
+						</section>
+					</article>
+					<!--//col-->
+				</div>
+
+			</div>
+		</div>
+		<!--//docs-wrapper-->
+
+		<footer class="footer">
+
+			<div class="footer-bottom text-center py-5">
+
+				<ul class="social-list list-unstyled pb-4 mb-0">
+					<li v-if="data.social" v-for="soc in data.social" class="list-inline-item"><a :href="soc.url"><i
+								:class="soc.icon" class="  fa-fw"></i></a></li>
+				</ul>
+				<!--//social-list-->
+
+				<!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+				<small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a
+						class="theme-link" href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for
+					developers</small>
+
+
 			</div>
 
-		</div>
+		</footer>
+
 	</div>
-	<!--//docs-wrapper-->
-
-
 	<!-- Javascript -->
 	<script src="https://unpkg.com/vue@3"></script>
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	<script src="assets/plugins/popper.min.js"></script>
 	<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/plugins/sass/sass.js"></script>
 
 
 	<!-- Page Specific JS -->
@@ -202,7 +244,6 @@
 	<script src="assets/plugins/simplelightbox/simple-lightbox.min.js"></script>
 	<script src="assets/plugins/gumshoe/gumshoe.polyfills.min.js"></script>
 	<script src="assets/js/docs.js"></script>
-
 </body>
 
 </html>
