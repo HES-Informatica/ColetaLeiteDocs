@@ -232,17 +232,19 @@ window.onresize = function () {
 
 /* ===== Responsive Sidebar ====== */
 function responsiveSidebar() {
+	
 	if (document.getElementById("sidebar-search") != document.activeElement) {
 
 		let sidebar = document.getElementById('docs-sidebar');
 		let w = window.innerWidth;
+
 		if (w >= 1200) {
-			// if larger 	
+		 	
 			sidebar.classList.remove('sidebar-hidden');
 			sidebar.classList.add('sidebar-visible');
 
 		} else {
-			// if smaller	
+			 	
 			sidebar.classList.remove('sidebar-visible');
 			sidebar.classList.add('sidebar-hidden');
 		}
