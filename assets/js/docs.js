@@ -4,14 +4,23 @@
 var lightboxes = [];
 const sass = new Sass();
 
+window.location.query = new URLSearchParams(window.location.search);
+
+String.prototype.isBlank = function () { return `${this}`.trim() == ""; }
+
+String.prototype.ifBlank = function (e) { return `${this}`.isBlank() ? e || "" : `${this}`; }
 
 async function getJson(url) {
-	return await fetch(url, { mode: 'cors' }).then(async (response) => await response.json().then(async (json) => await json));
+	try {
+		return await fetch(url, { mode: 'cors' }).then(async (response) => await response.json().then(async (json) => await json || {}));
+	} catch (error) {
+		return { 'error': error }
+	}
 }
 
 
-async function getText(url) {
-	return await fetch(url, { mode: 'cors' }).then(async (response) => await response.text().then(async (txt) => await txt));
+async function getText(url, alternateText) {
+	return await fetch(url, { mode: 'cors' }).then(async (response) => await response.text().then(async (txt) => await txt.ifBlank(alternateText) || ""));
 }
 
 function parseHTML(html) {
@@ -20,23 +29,25 @@ function parseHTML(html) {
 	return el.childNodes;
 }
 
+function getParam(name) {
+	return window.location.query.get(name);
+}
+
+window.basePath = getParam('basePath');
+
 window.search = function (filter, keep) {
 
 	var root, articles, i, txtValue;
 	filter = filter.toUpperCase();
 	root = document.getElementById("app");
 	articles = root.getElementsByTagName("article");
-
-
-
 	for (i = 0; i < articles.length; i++) {
 		let article = articles[i];
 		txtValue = article.textContent || article.innerText || "";
 		var containsSearch = txtValue.toUpperCase().indexOf(filter) > -1;
 		var section = article.getElementsByTagName('section')[0];
-		var menu = document.getElementById("menu-" + article.id) || document.getElementById("menu-" + section.id) ;
+		var menu = document.getElementById("menu-" + article.id) || document.getElementById("menu-" + section.id);
 
-	 
 
 		article.style.display = '';
 		article.style.opacity = 1;
@@ -58,8 +69,18 @@ window.search = function (filter, keep) {
 }
 
 
+
+
+
 async function getContent() {
-	var json = await getJson('content.json');
+
+	if (window.basePath) {
+		console.log('Documentation Orign', window.basePath);
+	} else {
+		window.basePath = window.origin + "/content.json";
+	}
+
+	var json = await getJson(window.basePath);
 
 	if (json.title) {
 		json.title = marked.parseInline(json.title ?? "");
@@ -69,28 +90,28 @@ async function getContent() {
 		let item = json.content[index];
 
 		if (item.contentfile) {
-			item.content = await getText(item.contentfile);
+			item.content = await getText(item.contentfile, item.content);
 		}
 
 		if (item.content)
-			item.content = marked.parse(item.content ?? "");
+			item.content = marked.parse(item.content || "");
 
 
 		if (item.aftercontentfile) {
-			item.aftercontent = await getText(item.aftercontentfile);
+			item.aftercontent = await getText(item.aftercontentfile, item.aftercontent);
 		}
 
 		if (item.aftercontent)
-			item.aftercontent = marked.parse(item.aftercontent ?? "");
+			item.aftercontent = marked.parse(item.aftercontent || "");
 
 		if (item.warning)
-			item.warning = marked.parse(item.warning ?? "");
+			item.warning = marked.parse(item.warning || "");
 
 		if (item.info)
-			item.info = marked.parse(item.info ?? "");
+			item.info = marked.parse(item.info || "");
 
 		if (item.danger)
-			item.danger = marked.parse(item.danger ?? "");
+			item.danger = marked.parse(item.danger || "");
 
 
 	}
@@ -154,7 +175,6 @@ getContent().then((json) => {
 				const boxes = document.querySelectorAll('[class*="simplelightbox-gallery-"]');
 				boxes.forEach(function (box) {
 					var classe = "." + box.className.split(" ")[0] + ' a'
-
 					lightboxes.push(new SimpleLightbox(classe, { /* options */ }));
 				});
 
@@ -212,17 +232,20 @@ window.onresize = function () {
 
 /* ===== Responsive Sidebar ====== */
 function responsiveSidebar() {
-	let sidebar = document.getElementById('docs-sidebar');
-	let w = window.innerWidth;
-	if (w >= 1200) {
-		// if larger 	
-		sidebar.classList.remove('sidebar-hidden');
-		sidebar.classList.add('sidebar-visible');
+	if (document.getElementById("sidebar-search") != document.activeElement) {
 
-	} else {
-		// if smaller	
-		sidebar.classList.remove('sidebar-visible');
-		sidebar.classList.add('sidebar-hidden');
+		let sidebar = document.getElementById('docs-sidebar');
+		let w = window.innerWidth;
+		if (w >= 1200) {
+			// if larger 	
+			sidebar.classList.remove('sidebar-hidden');
+			sidebar.classList.add('sidebar-visible');
+
+		} else {
+			// if smaller	
+			sidebar.classList.remove('sidebar-visible');
+			sidebar.classList.add('sidebar-hidden');
+		}
 	}
 };
 
