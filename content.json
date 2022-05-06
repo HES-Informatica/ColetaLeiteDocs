@@ -234,6 +234,28 @@
                     "title": "Tela de Scanner de QR Code"
                 }
             ]
+        },
+        {
+            "id": "5.3",
+            "title": "Conteudo dos Tanques",
+            "content": "Ao seleciona um tanque na lista ou através do QRCode, a seguinte tela e apresentada ",         
+            "lightbox": [
+                {
+                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/dados_coleta.png",
+                    "title": "Dados da Coleta"
+                }
+            ]
+        },
+        {
+            "id": "5.3.1",
+            "title": "Informaçoes da coleta",
+            "content": "O motorista precisa preencher todos os dados corretamente",         
+            "lightbox": [
+                {
+                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/dados_coleta.png",
+                    "title": "Dados da Coleta"
+                }
+            ]
         }
     ]
 }
