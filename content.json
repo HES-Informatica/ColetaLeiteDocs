@@ -203,7 +203,7 @@
         {
             "id": "4.1",
             "title": "Entendendo as Linhas",
-            "aftercontentfile": "https://hes-informatica.github.io/ColetaLeiteDocs/img/entendendo_linhas.md"
+            "aftercontentfile": "https://hes-informatica.github.io/ColetaLeiteDocs/entendendo_linhas.md"
         },
         {
             "id": "5",
@@ -221,7 +221,7 @@
         {
             "id": "5.1",
             "title": "Entendendo os Tanques",
-            "aftercontentfile": "https://hes-informatica.github.io/ColetaLeiteDocs/img/entendendo_tanques.md"
+            "aftercontentfile": "https://hes-informatica.github.io/ColetaLeiteDocs/entendendo_tanques.md"
         },
         {
             "id": "5.2",
