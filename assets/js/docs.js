@@ -77,7 +77,7 @@ async function getContent() {
 	if (window.basePath) {
 		console.log('Documentation Orign', window.basePath);
 	} else {
-		window.basePath = window.origin + "/content.json";
+		window.basePath =  'content.json';
 	}
 
 	var json = await getJson(window.basePath);
@@ -232,7 +232,7 @@ window.onresize = function () {
 
 /* ===== Responsive Sidebar ====== */
 function responsiveSidebar() {
-	
+
 	if (document.getElementById("sidebar-search") != document.activeElement) {
 
 		let sidebar = document.getElementById('docs-sidebar');
