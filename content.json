@@ -275,6 +275,7 @@
         },
         {
             "id": "5.4",
+            "icon":"fa-solid fa-floppy-disk",
             "title": "Salvando a Coleta",
             "content": "Após preencher os dados, sejam eles da coleta em sí ou da falha, deve-se pressionar o botão de salvamento <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_SALVAR.png' />"
         },
