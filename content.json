@@ -14,7 +14,7 @@
         }
     ],
     "logo": "https://hes-informatica.github.io/ColetaLeiteDocs/img/AppColeta.png",
-    "downloadbutton": "javascript:alert('Ainda Não')",
+    "downloadbutton": "javascript:alert('App ainda não disponível')",
     "content": [
         {
             "id": "intro",
