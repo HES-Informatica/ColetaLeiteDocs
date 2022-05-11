@@ -302,8 +302,7 @@
             ]
         },
         {
-            "id": "6.1",
-            "icon": "fa fa-cloud",
+            "id": "6.2",           
             "title": "Compartilhando a Coleta",
             "content": "Caso não for possível enviar os dados para o servidor, o motorista pode compartilhar os dados da coleta através de outros aplicativos",
             "lightbox": [
