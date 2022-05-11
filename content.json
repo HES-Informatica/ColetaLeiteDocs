@@ -293,7 +293,7 @@
             "id": "6.1",
             "icon": "fa fa-cloud",
             "title": "Transferindo para o Servidor",
-            "content": "Após realizar todas as coletas, será necessário retornar a fábrica e transferir os dados para o servidor",
+            "content": "Após realizar todas as coletas, será necessário retornar a fábrica e transferir os dados para o servidor no botão <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_UPLOAD.png' />",
             "lightbox": [
                 {
                     "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_enviar_servidor.png",
@@ -304,7 +304,7 @@
         {
             "id": "6.2",           
             "title": "Compartilhando a Coleta",
-            "content": "Caso não for possível enviar os dados para o servidor, o motorista pode compartilhar os dados da coleta através de outros aplicativos",
+            "content": "Caso não for possível enviar os dados para o servidor, o motorista pode compartilhar os dados da coleta através de outros aplicativos no botão <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_COMPARTILHAR.png' />",
             "lightbox": [
                 {
                     "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_compartilhar.png",
