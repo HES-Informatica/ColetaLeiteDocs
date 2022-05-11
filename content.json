@@ -1,5 +1,5 @@
 {
-    "title": "ColetaLeite!",  
+    "title": "ColetaLeite!",
     "social": [
         {
             "name": "Website",
@@ -277,6 +277,41 @@
             "id": "5.4",
             "title": "Salvando a Coleta",
             "content": "Após preencher os dados, sejam eles da coleta em sí ou da falha, deve-se pressionar o botão de salvamento <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_SALVAR.png' />"
+        },
+        {
+            "id": "6",
+            "icon": "fa fa-cloud",
+            "title": "Encerrando a Coleta", 
+            "lightbox": [
+                {
+                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_enviar_servidor.png",
+                    "title": "Falha da Coleta"
+                }
+            ]
+        },
+        {
+            "id": "6.1",
+            "icon": "fa fa-cloud",
+            "title": "Transferindo para o Servidor",
+            "content": "Após realizar todas as coletas, será necessário retornar a fábrica e transferir os dados para o servidor",
+            "lightbox": [
+                {
+                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_enviar_servidor.png",
+                    "title": "Enviar para o servidor"
+                }
+            ]
+        },
+        {
+            "id": "6.1",
+            "icon": "fa fa-cloud",
+            "title": "Compartilhando a Coleta",
+            "content": "Caso não for possível enviar os dados para o servidor, o motorista pode compartilhar os dados da coleta através de outros aplicativos",
+            "lightbox": [
+                {
+                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_compartilhar.png",
+                    "title": "Enviar para o servidor"
+                }
+            ]
         }
     ]
 }
