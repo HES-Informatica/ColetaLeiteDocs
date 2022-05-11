@@ -25,8 +25,7 @@
             "icon": "fas fa-mobile",
             "title": "Introdução",
             "date": "04/05/2022",
-            "content": "Aplicação focada na coleta de leite dos carreteiros, passando pelas linhas de coleta, pegando informações dos tanques e do leite coletado atualmente.",
-            "lightbox": []
+            "content": "Aplicação focada na coleta de leite dos carreteiros, passando pelas linhas de coleta, pegando informações dos tanques e do leite coletado atualmente."          
         },
         {
             "id": "1",
