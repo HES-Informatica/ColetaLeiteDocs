@@ -1,5 +1,5 @@
 {
-    "title": "ColetaLeite!",
+    "title": "ColetaLeite!",  
     "social": [
         {
             "name": "Website",
@@ -238,7 +238,7 @@
         {
             "id": "5.3",
             "title": "Conteudo dos Tanques",
-            "content": "Ao seleciona um tanque na lista ou através do QRCode, a seguinte tela e apresentada ",         
+            "content": "Ao seleciona um tanque na lista ou através do QRCode, a seguinte tela e apresentada ",
             "lightbox": [
                 {
                     "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/dados_coleta.png",
@@ -249,7 +249,7 @@
         {
             "id": "5.3.1",
             "title": "Informaçoes da coleta",
-            "content": "O motorista precisa preencher todos os dados corretamente",         
+            "content": "O motorista precisa preencher todos os dados corretamente",
             "lightbox": [
                 {
                     "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/dados_coleta.png",
@@ -260,25 +260,23 @@
         {
             "id": "5.3.2",
             "title": "Falha na coleta",
-            "content": "Caso ocorra algum problema com a coleta, o motorista deve preencher os seguintes dados", 
-            "aftercontent":"O motorista deve preencher o motivo da falha da coleta e tirar uma foto do local.",        
+            "content": "Caso ocorra algum problema com a coleta, o motorista deve preencher os seguintes dados",
+            "aftercontent": "O motorista deve preencher o motivo da falha da coleta e tirar uma foto do local.",
             "lightbox": [
                 {
                     "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/falha_coleta.png",
-                    "title": "Dados da Coleta"
+                    "title": "Falha da Coleta"
                 },
                 {
                     "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/falha_coleta_opcoes.png",
-                    "title": "Dados da Coleta"
+                    "title": "Opções comuns de falha"
                 }
             ]
         },
         {
             "id": "5.4",
             "title": "Salvando a Coleta",
-            "content": "Após preencher os dados, sejam eles da coleta em sí ou da falha, deve-se pressionar o botão de salvamento <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_SALVAR.png' />" 
-  
-             
+            "content": "Após preencher os dados, sejam eles da coleta em sí ou da falha, deve-se pressionar o botão de salvamento <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_SALVAR.png' />"
         }
     ]
 }
