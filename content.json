@@ -249,7 +249,7 @@
         {
             "id": "5.3.1",
             "title": "Informaçoes da coleta",
-            "contentfile": "informacoes_coleta.md",
+            "contentfile": "https://hes-informatica.github.io/ColetaLeiteDocs/informacoes_coleta.md",
             "lightbox": [
                 {
                     "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/dados_coleta.png",
@@ -260,7 +260,7 @@
         {
             "id": "5.3.2",
             "title": "Falha na coleta",
-            "contentfile": "falha_coleta.md",      
+            "contentfile": "https://hes-informatica.github.io/ColetaLeiteDocs/falha_coleta.md",      
             "lightbox": [
                 {
                     "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/falha_coleta.png",
