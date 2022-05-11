@@ -277,17 +277,8 @@
             "id": "5.4",
             "title": "Salvando a Coleta",
             "content": "Após preencher os dados, sejam eles da coleta em sí ou da falha, deve-se pressionar o botão de salvamento <img class='img_botao' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_SALVAR.png' />", 
-            "aftercontent":"O motorista deve preencher o motivo da falha da coleta e tirar uma foto do local.",        
-            "lightbox": [
-                {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/falha_coleta.png",
-                    "title": "Dados da Coleta"
-                },
-                {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/falha_coleta_opcoes.png",
-                    "title": "Dados da Coleta"
-                }
-            ]
+  
+             
         }
     ]
 }
