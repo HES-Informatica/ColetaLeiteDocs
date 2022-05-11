@@ -1,8 +1,7 @@
 {
     "title": "ColetaLeite!",
-    "searchplaceholder":"Pesquisar",
-   
-    "datelabel": "Updated",  
+    "searchplaceholder":"Pesquisar",   
+    "datelabel": "Atualizado em:",  
     "infolabel": "Observação", 
     "warninglabel": "Atenção",  
     "dangerlabel": "Atenção",  
