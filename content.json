@@ -260,8 +260,7 @@
         {
             "id": "5.3.2",
             "title": "Falha na coleta",
-            "contentfile": "falha_coleta.md",
-            "aftercontent": "O motorista deve preencher o motivo da falha da coleta e tirar uma foto do local.",
+            "contentfile": "falha_coleta.md",      
             "lightbox": [
                 {
                     "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/falha_coleta.png",
