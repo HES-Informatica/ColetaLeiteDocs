@@ -1,5 +1,6 @@
 {
     "title": "ColetaLeite!",
+    "color":"yellow",
     "searchplaceholder": "Pesquisar",
     "datelabel": "Atualizado em:",
     "infolabel": "Observação",
@@ -84,7 +85,7 @@
             "title": "Limpeza de Dados",
             "date": "04/05/2022",
             "content": "Caso seja necessário, o usuário pode limpar os dados offline do aplicativo. Entende-se por dados offline tudo aquilo que foi copiado do servidor para o dispositivo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma lata com um X. <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_APAGAR.png'  />",
-            "warning": "Ao executar este procedimento NÃO SERÁ POSSÍVEL realizar o login fora da fábrica. Será necessário recuperar os dados de login, veículos, linhas e tanques na fábrica.",
+            "danger": "Ao executar este procedimento NÃO SERÁ POSSÍVEL realizar o login fora da fábrica. Será necessário recuperar os dados de login, veículos, linhas e tanques na fábrica.",
             "info": "Para evitar acidentes com os dados, uma confirmação por texto é necessária."
           
         },
