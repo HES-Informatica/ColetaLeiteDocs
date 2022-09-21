@@ -2,7 +2,7 @@
 
 1. Ícone de checagem do tanque.
     - <img src='https://hes-informatica.github.io/ColetaLeiteDocs/img/check_preenchido.png' width='20px' />   Indica que o motorista ja passou por aquele tanque
-    - <img src='https://hes-informatica.github.io/ColetaLeiteDocs/img/check_vazio.png' width='20px' />  Indica que o motorista ainda passou por aquele tanque
+    - <img src='https://hes-informatica.github.io/ColetaLeiteDocs/img/check_vazio.png' width='20px' />  Indica que o motorista ainda não passou por aquele tanque
 
 2. Nome do Tanque
 

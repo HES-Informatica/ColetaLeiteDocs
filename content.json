@@ -164,7 +164,7 @@
         {
             "id": "3.1",
             "title": "Veículo",
-            "content": "A tela de pré-coleta permite ao motorista escolher um dos veículos cadastrados no sistema SCL que já foram baixados para o dispositivo. o usuário pode buscar um veículo cadastrado através da placa ou modelo do veículo",
+            "content": "A tela de pré-coleta permite ao motorista escolher um dos veículos cadastrados no sistema SCL que já foram baixados para o dispositivo. O usuário pode buscar um veículo cadastrado através da placa ou modelo do veículo",
             "lightbox": [
                 {
                     "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_veiculo.png",
@@ -212,7 +212,7 @@
             "id": "5",
             "icon": "fa-solid fa-glass-water-droplet",
             "title": "Tanques",
-            "date": "10/05/2022",
+            "date": "21/09/2022",
             "content": "A tela de tanques possui o layout parecido com a tela de Linhas, mas seus ícones trazem outras informações",
             "info": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador",
             "lightbox": [
