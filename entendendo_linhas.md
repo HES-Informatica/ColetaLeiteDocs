@@ -1,4 +1,4 @@
-<img src="https://hes-informatica.github.io/ColetaLeiteDocs/img/descricao_linha.png" width="80%" />
+<img src="https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/descricao_linha.png" width="80%" />
 
 1. Linha Aberta: Quando preenchida indica que uma coleta nesta linha foi iniciada
   

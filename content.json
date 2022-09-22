@@ -72,7 +72,7 @@
             "id": "1.2",
             "title": "Branding/logo",
             "date": "04/05/2022",
-            "content": "![logo](img/logo.png)<br></br>Apesar de opcional, esta configuração é interessante para o cliente pois aplica a marca dele no aplicativo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma imagem. <img class='botao-app' src='img/BOTAO_IMAGEM.png'   />",
+            "content": "![logo](https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/logo.png)<br></br>Apesar de opcional, esta configuração é interessante para o cliente pois aplica a marca dele no aplicativo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma imagem. <img class='botao-app' src='img/BOTAO_IMAGEM.png'   />",
             "warning": "Esta configuraçao necessita da senha administrativa para ser alterada. Se voce nao e um administrador do aplicativo, contate um representante H&S.",
             "aftercontent": "Ao inserir a senha, você poderá escolher uma imagem PNG do logo do cliente. Esta imagem <b>substituirá</b> a imagem padrão do aplicativo",
             "lightbox": [
