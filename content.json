@@ -19,7 +19,7 @@
             "url": "http://hes-informatica.github.io"
         }
     ],
-    "logo": "https://hes-informatica.github.io/ColetaLeiteDocs/img/AppColeta.png",
+    "logo": "img/AppColeta.png",
     "downloadbutton": "javascript:alert('App ainda não disponível')",
     "printbutton": "Imprimir",
     "content": [
@@ -35,14 +35,14 @@
             "icon": "fa fa-cog",
             "title": "Configurações Iniciais",
             "date": "04/05/2022",
-            "content": "O menu de engrenagem <img class=\"botao-app\" src=\"https://hes-informatica.github.io/ColetaLeiteDocs/img/botao_engrenagem.png\"  /> contém as configurações básicas de funcionamento do App",
+            "content": "O menu de engrenagem <img class=\"botao-app\" src=\"img/botao_engrenagem.png\"  /> contém as configurações básicas de funcionamento do App",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/login.png",
+                    "image": "img/login.png",
                     "title": "Tela de login"
                 },
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/login_menu.png",
+                    "image": "img/login_menu.png",
                     "title": "Tela de login com menu aberto"
                 }
             ]
@@ -51,19 +51,19 @@
             "id": "1.1",
             "title": "Apontamentos de Servidor",
             "date": "04/05/2022",
-            "content": "O aplicativo precisa estar configurado para enviar as coletas para a fábrica quando estiver dentro da rede da fábrica. Esta configuração está disponivel no menu da engrenagem, na tela de login. Seu icone é representado por uma nuvem. <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_NUVEM.png' />",
+            "content": "O aplicativo precisa estar configurado para enviar as coletas para a fábrica quando estiver dentro da rede da fábrica. Esta configuração está disponivel no menu da engrenagem, na tela de login. Seu icone é representado por uma nuvem. <img class='botao-app' src='img/BOTAO_NUVEM.png' />",
             "warning": "Esta configuraçao necessita da senha administrativa para ser alterada. Se voce nao e um administrador do aplicativo, contate um representante H&S.",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_adm.png",
+                    "image": "img/popup_adm.png",
                     "title": "Tela de login com menu aberto"
                 },
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_senha.png",
+                    "image": "img/popup_senha.png",
                     "title": "Tela de login com menu aberto"
                 },
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_servidor.png",
+                    "image": "img/popup_servidor.png",
                     "title": "Tela de login com menu aberto"
                 }
             ]
@@ -72,12 +72,12 @@
             "id": "1.2",
             "title": "Branding/logo",
             "date": "04/05/2022",
-            "content": "![logo](https://hes-informatica.github.io/ColetaLeiteDocs/img/logo.png)<br></br>Apesar de opcional, esta configuração é interessante para o cliente pois aplica a marca dele no aplicativo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma imagem. <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_IMAGEM.png'   />",
+            "content": "![logo](img/logo.png)<br></br>Apesar de opcional, esta configuração é interessante para o cliente pois aplica a marca dele no aplicativo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma imagem. <img class='botao-app' src='img/BOTAO_IMAGEM.png'   />",
             "warning": "Esta configuraçao necessita da senha administrativa para ser alterada. Se voce nao e um administrador do aplicativo, contate um representante H&S.",
             "aftercontent": "Ao inserir a senha, você poderá escolher uma imagem PNG do logo do cliente. Esta imagem <b>substituirá</b> a imagem padrão do aplicativo",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_senha.png",
+                    "image": "img/popup_senha.png",
                     "title": "Popup de confirmação de senha"
                 }
             ]
@@ -86,7 +86,7 @@
             "id": "1.3",
             "title": "Limpeza de Dados",
             "date": "04/05/2022",
-            "content": "Caso seja necessário, o usuário pode limpar os dados offline do aplicativo. Entende-se por dados offline tudo aquilo que foi copiado do servidor para o dispositivo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma lata com um X. <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_APAGAR.png'  />",
+            "content": "Caso seja necessário, o usuário pode limpar os dados offline do aplicativo. Entende-se por dados offline tudo aquilo que foi copiado do servidor para o dispositivo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma lata com um X. <img class='botao-app' src='img/BOTAO_APAGAR.png'  />",
             "danger": "Ao executar este procedimento NÃO SERÁ POSSÍVEL realizar o login fora da fábrica. Será necessário recuperar os dados de login, veículos, linhas e tanques na fábrica.",
             "info": "Para evitar acidentes com os dados, uma confirmação por texto é necessária."
           
@@ -110,7 +110,7 @@
             "aftercontent": "Os logins subsequentes podem ser realizados desconectado da rede ou da internet. Caso esteja conectado á fabrica, os login subsequentes também atualizarão os dados (inclusive sua senha, caso tenha solicitado alteração ao administrador).",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/login.png",
+                    "image": "img/login.png",
                     "title": "Tela de Login"
                 }
             ]
@@ -130,7 +130,7 @@
             "info": "A atualização leva no máximo 60 segundos. O tempo médio estimado é de 15 segundos",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_atualizando.png",
+                    "image": "img/popup_atualizando.png",
                     "title": "Download dos dados em andamento"
                 }
             ]
@@ -142,7 +142,7 @@
             "info": "O motorista pode retomar uma coleta aberta. Caso opte por começar do zero, os dados de coleta atuais são limpos e uma nova coleta será iniciada.",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_coleta_aberta.png",
+                    "image": "img/popup_coleta_aberta.png",
                     "title": "Popup de coleta aberta"
                 }
             ]
@@ -155,11 +155,11 @@
             "content": "Antes de iniciar a coleta, é necessário preencher alguns campos, como o  (modelo/placa) e o odômetro",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/pre_coleta.png",
+                    "image": "img/pre_coleta.png",
                     "title": "Tela de Pré-Coleta"
                 }
             ],
-            "info": "Voce pode fazer logoff na tela de pre-coleta tocando em <img src='https://hes-informatica.github.io/ColetaLeiteDocs/img/sair.png' class='botao-app' />"
+            "info": "Voce pode fazer logoff na tela de pre-coleta tocando em <img src='img/sair.png' class='botao-app' />"
         },
         {
             "id": "3.1",
@@ -167,11 +167,11 @@
             "content": "A tela de pré-coleta permite ao motorista escolher um dos veículos cadastrados no sistema SCL que já foram baixados para o dispositivo. O usuário pode buscar um veículo cadastrado através da placa ou modelo do veículo",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_veiculo.png",
+                    "image": "img/popup_veiculo.png",
                     "title": "Escolha de veículos"
                 },
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_veiculo_filtro.png",
+                    "image": "img/popup_veiculo_filtro.png",
                     "title": "Escolha de veículos"
                 }
             ]
@@ -190,15 +190,15 @@
             "info": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/linhas.png",
+                    "image": "img/linhas.png",
                     "title": "Linhas Recentes"
                 },
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/linhas_aberta.png",
+                    "image": "img/linhas_aberta.png",
                     "title": "Linha aberta"
                 },
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/linhas_todas.png",
+                    "image": "img/linhas_todas.png",
                     "title": "Todas as Linhas"
                 }
             ]
@@ -206,7 +206,7 @@
         {
             "id": "4.1",
             "title": "Entendendo as Linhas",
-            "aftercontentfile": "https://hes-informatica.github.io/ColetaLeiteDocs/entendendo_linhas.md"
+            "aftercontentfile": "entendendo_linhas.md"
         },
         {
             "id": "5",
@@ -217,7 +217,7 @@
             "info": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/tanques.png",
+                    "image": "img/tanques.png",
                     "title": "Linhas Recentes"
                 }
             ]
@@ -225,16 +225,16 @@
         {
             "id": "5.1",
             "title": "Entendendo os Tanques",
-            "aftercontentfile": "https://hes-informatica.github.io/ColetaLeiteDocs/entendendo_tanques.md"
+            "aftercontentfile": "entendendo_tanques.md"
         },
         {
             "id": "5.2",
             "title": "Acessando um Tanque por QR Code",
-            "content": "Se o tanque possuir um QR Code, o motorista pode acessar o formulario de coleta deste tanque diretamente. Para acessar o scanner toque em <img src='https://hes-informatica.github.io/ColetaLeiteDocs/img/qrcode.png' class='botao-app' />",
+            "content": "Se o tanque possuir um QR Code, o motorista pode acessar o formulario de coleta deste tanque diretamente. Para acessar o scanner toque em <img src='img/qrcode.png' class='botao-app' />",
             "aftercontent": "Aponte a camera do celular para o QR Code. Se a leitura for bem sucedida o formulario de coleta abrira automaticamente",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/qr_code.png",
+                    "image": "img/qr_code.png",
                     "title": "Tela de Scanner de QR Code"
                 }
             ]
@@ -245,7 +245,7 @@
             "content": "Ao seleciona um tanque na lista ou através do QRCode, a seguinte tela e apresentada ",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/dados_coleta.png",
+                    "image": "img/dados_coleta.png",
                     "title": "Dados da Coleta"
                 }
             ]
@@ -253,10 +253,10 @@
         {
             "id": "5.3.1",
             "title": "Informaçoes da coleta",
-            "contentfile": "https://hes-informatica.github.io/ColetaLeiteDocs/informacoes_coleta.md",
+            "contentfile": "informacoes_coleta.md",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/dados_coleta.png",
+                    "image": "img/dados_coleta.png",
                     "title": "Dados da Coleta"
                 }
             ]
@@ -264,14 +264,14 @@
         {
             "id": "5.3.2",
             "title": "Falha na coleta",
-            "contentfile": "https://hes-informatica.github.io/ColetaLeiteDocs/falha_coleta.md",
+            "contentfile": "falha_coleta.md",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/falha_coleta.png",
+                    "image": "img/falha_coleta.png",
                     "title": "Falha da Coleta"
                 },
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/falha_coleta_opcoes.png",
+                    "image": "img/falha_coleta_opcoes.png",
                     "title": "Opções comuns de falha"
                 }
             ]
@@ -280,7 +280,7 @@
             "id": "5.4",
             "icon": "fa-solid fa-floppy-disk",
             "title": "Salvando a Coleta",
-            "content": "Após preencher os dados, sejam eles da coleta em sí ou da falha, deve-se pressionar o botão de salvamento <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_SALVAR.png' />"
+            "content": "Após preencher os dados, sejam eles da coleta em sí ou da falha, deve-se pressionar o botão de salvamento <img class='botao-app' src='img/BOTAO_SALVAR.png' />"
         },
         {
             "id": "6",
@@ -289,7 +289,7 @@
             "title": "Encerrando a Coleta",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_enviar_servidor.png",
+                    "image": "img/popup_enviar_servidor.png",
                     "title": "Falha da Coleta"
                 }
             ]
@@ -298,10 +298,10 @@
             "id": "6.1",
             "icon": "fa fa-cloud-arrow-up",
             "title": "Transferindo para o Servidor",
-            "content": "Após realizar todas as coletas, será necessário retornar a fábrica e transferir os dados para o servidor no botão <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_UPLOAD.png' />",
+            "content": "Após realizar todas as coletas, será necessário retornar a fábrica e transferir os dados para o servidor no botão <img class='botao-app' src='img/BOTAO_UPLOAD.png' />",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_enviar_servidor.png",
+                    "image": "img/popup_enviar_servidor.png",
                     "title": "Enviar para o servidor"
                 }
             ]
@@ -310,12 +310,12 @@
             "id": "6.2",
             "title": "Compartilhando a Coleta",
             "icon": "fa fa-share",
-            "content": "Caso não for possível enviar os dados para o servidor, o motorista pode compartilhar os dados da coleta através de outros aplicativos no botão <img class='botao-app' src='https://hes-informatica.github.io/ColetaLeiteDocs/img/BOTAO_COMPARTILHAR.png' />.",
+            "content": "Caso não for possível enviar os dados para o servidor, o motorista pode compartilhar os dados da coleta através de outros aplicativos no botão <img class='botao-app' src='img/BOTAO_COMPARTILHAR.png' />.",
             "info": "Um texto padrão já é fornecido pelo aplicativo para facilitar o compartilhamento.",
             "aftercontent": "Um arquivo XML e as fotos da coleta serão compartilhados de uma só vez através do aplicativo escolhido (Whatsapp, Telegram, Email)",
             "lightbox": [
                 {
-                    "image": "https://hes-informatica.github.io/ColetaLeiteDocs/img/popup_compartilhar.png",
+                    "image": "img/popup_compartilhar.png",
                     "title": "Compartilhar Coleta"
                 }
             ]
