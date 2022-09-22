@@ -35,7 +35,7 @@
             "icon": "fa fa-cog",
             "title": "Configurações Iniciais",
             "date": "04/05/2022",
-            "content": "O menu de engrenagem <img class=\"botao-app\" src=\"img/botao_engrenagem.png\"  /> contém as configurações básicas de funcionamento do App",
+            "content": "O menu de engrenagem <img class=\"botao-app\" src=\"https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/botao_engrenagem.png\"  /> contém as configurações básicas de funcionamento do App",
             "lightbox": [
                 {
                     "image": "img/login.png",
