@@ -1,14 +1,14 @@
 {
     "title": "ColetaLeite!",
     "language": "pt-BR",
-    "color":"rgb(1, 72, 142)",    
+    "color": "rgb(1, 72, 142)",
     "searchplaceholder": "Pesquisar",
     "datelabel": "Atualizado em:",
     "infolabel": "Observação",
     "warninglabel": "Atenção",
     "dangerlabel": "Atenção",
-    "viewraw":"Visualizar arquivo original",
-    "copydialog":"Pressione CTRL+C para copiar o link desta seção",
+    "viewraw": "Visualizar arquivo original",
+    "copydialog": "Pressione CTRL+C para copiar o link desta seção",
     "social": [
         {
             "name": "Website",
@@ -91,7 +91,6 @@
             "content": "Caso seja necessário, o usuário pode limpar os dados offline do aplicativo. Entende-se por dados offline tudo aquilo que foi copiado do servidor para o dispositivo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma lata com um X. <img class='botao-app' src='https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/BOTAO_APAGAR.png'  />",
             "danger": "Ao executar este procedimento NÃO SERÁ POSSÍVEL realizar o login fora da fábrica. Será necessário recuperar os dados de login, veículos, linhas e tanques na fábrica.",
             "info": "Para evitar acidentes com os dados, uma confirmação por texto é necessária."
-          
         },
         {
             "id": "1.3.1",
