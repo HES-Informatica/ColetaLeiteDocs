@@ -7,6 +7,8 @@
     "infolabel": "Observação",
     "warninglabel": "Atenção",
     "dangerlabel": "Atenção",
+    "viewraw":"Visualizar arquivo original",
+    "copydialog":"Pressione CTRL+C para copiar o link desta seção",
     "social": [
         {
             "name": "Website",
