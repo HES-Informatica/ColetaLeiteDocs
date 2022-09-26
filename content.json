@@ -54,7 +54,13 @@
             "title": "Apontamentos de Servidor",
             "date": "04/05/2022",
             "content": "O aplicativo precisa estar configurado para enviar as coletas para a fábrica quando estiver dentro da rede da fábrica. Esta configuração está disponivel no menu da engrenagem, na tela de login. Seu icone é representado por uma nuvem. <img class='botao-app' src='https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/BOTAO_NUVEM.png' />",
-            "warning": "Esta configuraçao necessita da senha administrativa para ser alterada. Se voce nao e um administrador do aplicativo, contate um representante H&S.",
+            "alerts": [
+                {
+                    "type": "warning",
+                    "label": "Atenção",
+                    "content": "Esta configuraçao necessita da senha administrativa para ser alterada. Se voce nao e um administrador do aplicativo, contate um representante H&S."
+                }
+            ],
             "lightbox": [
                 {
                     "image": "img/popup_adm.png",
@@ -75,7 +81,12 @@
             "title": "Branding/logo",
             "date": "04/05/2022",
             "content": "![logo](https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/logo.png)<br></br>Apesar de opcional, esta configuração é interessante para o cliente pois aplica a marca dele no aplicativo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma imagem. <img class='botao-app' src='https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/BOTAO_IMAGEM.png'   />",
-            "warning": "Esta configuraçao necessita da senha administrativa para ser alterada. Se voce nao e um administrador do aplicativo, contate um representante H&S.",
+            "alerts": [
+                {
+                    "type": "warning",
+                    "content": "Esta configuraçao necessita da senha administrativa para ser alterada. Se você não é um administrador do aplicativo, contate um representante H&S."
+                }
+            ],
             "aftercontent": "Ao inserir a senha, você poderá escolher uma imagem PNG do logo do cliente. Esta imagem <b>substituirá</b> a imagem padrão do aplicativo",
             "lightbox": [
                 {
@@ -89,8 +100,15 @@
             "title": "Limpeza de Dados",
             "date": "04/05/2022",
             "content": "Caso seja necessário, o usuário pode limpar os dados offline do aplicativo. Entende-se por dados offline tudo aquilo que foi copiado do servidor para o dispositivo. Esta configuração está disponível no menu da engrenagem, na tela de login. Seu ícone é representado por uma lata com um X. <img class='botao-app' src='https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/BOTAO_APAGAR.png'  />",
-            "danger": "Ao executar este procedimento NÃO SERÁ POSSÍVEL realizar o login fora da fábrica. Será necessário recuperar os dados de login, veículos, linhas e tanques na fábrica.",
-            "info": "Para evitar acidentes com os dados, uma confirmação por texto é necessária."
+            "alerts": [
+                {
+                    "content": "Para evitar acidentes com os dados, uma confirmação por texto é necessária."
+                },
+                {
+                    "type": "danger",
+                    "content": "Ao executar este procedimento NÃO SERÁ POSSÍVEL realizar o login fora da fábrica. Será necessário recuperar os dados de login, veículos, linhas e tanques na fábrica."
+                }
+            ]
         },
         {
             "id": "1.3.1",
@@ -121,14 +139,23 @@
             "title": "Credenciais",
             "date": "04/05/2022",
             "content": "Para acessar o App, é necessário liberação por parte do administrador. Após liberação, voce pode acessar o app com seu CPF, CNPJ ou Email cadastrados no sistema SCL.",
-            "warning": "O primeiro login deve  ser feito dentro da fábrica, com o dispositivo conectado na mesma rede do servidor. Este primeiro login é importante pós além de  validar as credenciais do motorista/carreteiro, também vai  atualizar os dados do dispositivo  (Veículos, Linhas e Tanques)."
+            "alerts": [
+                {
+                    "type": "warning",
+                    "content": "O primeiro login deve  ser feito dentro da fábrica, com o dispositivo conectado na mesma rede do servidor. Este primeiro login é importante pós além de  validar as credenciais do motorista/carreteiro, também vai  atualizar os dados do dispositivo  (Veículos, Linhas e Tanques)."
+                }
+            ]
         },
         {
             "id": "2.2",
             "title": "Atualização de Dados",
             "date": "04/05/2022",
             "content": "A atualização de dados ocorre toda vez que o motorista fizer login dentro da fábrica. **Veículos, Linhas e Tanques** serão copiados para o dispositivo móvel do usuário",
-            "info": "A atualização leva no máximo 60 segundos. O tempo médio estimado é de 15 segundos",
+            "alerts": [
+                {
+                    "content": "A atualização leva no máximo 60 segundos. O tempo médio estimado é de 15 segundos"
+                }
+            ],
             "lightbox": [
                 {
                     "image": "img/popup_atualizando.png",
@@ -140,7 +167,11 @@
             "id": "2.3",
             "title": "Coletas Abertas",
             "date": "04/05/2022",
-            "info": "O motorista pode retomar uma coleta aberta. Caso opte por começar do zero, os dados de coleta atuais são limpos e uma nova coleta será iniciada.",
+            "alerts": [
+                {
+                    "content": "O motorista pode retomar uma coleta aberta. Caso opte por começar do zero, os dados de coleta atuais são limpos e uma nova coleta será iniciada."
+                }
+            ],
             "lightbox": [
                 {
                     "image": "img/popup_coleta_aberta.png",
@@ -160,7 +191,11 @@
                     "title": "Tela de Pré-Coleta"
                 }
             ],
-            "info": "Voce pode fazer logoff na tela de pre-coleta tocando em <img src='https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/sair.png' class='botao-app' />"
+            "alerts": [
+                {
+                    "content": "Voce pode fazer logoff na tela de pre-coleta tocando em <img src='https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/sair.png' class='botao-app' />"
+                }
+            ]
         },
         {
             "id": "3.1",
@@ -180,7 +215,11 @@
         {
             "id": "3.2",
             "title": "Odômetro",
-            "info": "Odômetro, apesar de não ser obrigatório o preenchimento, é interessante que seja preenchido sempre que possível."
+            "alerts": [
+                {
+                    "content": "Odômetro, apesar de não ser obrigatório o preenchimento, é interessante que seja preenchido sempre que possível."
+                }
+            ]
         },
         {
             "id": "4",
@@ -188,7 +227,11 @@
             "date": "10/05/2022",
             "title": "Linhas",
             "content": "A tela de linhas é dividida em 2 ou 3 abas. A primeira aba contém as linhas recentes. A segunda aba contém todas as linhas a qual o motorista possui acesso. A última aba contém todas as linhas cadastradas no sistema.",
-            "info": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador",
+            "alerts": [
+                {
+                    "content": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador"
+                }
+            ],
             "lightbox": [
                 {
                     "image": "img/linhas.png",
@@ -215,7 +258,11 @@
             "title": "Tanques",
             "date": "21/09/2022",
             "content": "A tela de tanques possui o layout parecido com a tela de Linhas, mas seus ícones trazem outras informações",
-            "info": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador",
+            "alerts": [
+                {
+                    "content": "A terceira aba (TODAS) nem sempre está disponível. É necessário solicitar este acesso ao administrador"
+                }
+            ],
             "lightbox": [
                 {
                     "image": "img/tanques.png",
@@ -242,7 +289,7 @@
         },
         {
             "id": "5.3",
-            "title": "Conteudo dos Tanques",
+            "title": "Conteúdo dos Tanques",
             "content": "Ao seleciona um tanque na lista ou através do QRCode, a seguinte tela e apresentada ",
             "lightbox": [
                 {
@@ -312,7 +359,11 @@
             "title": "Compartilhando a Coleta",
             "icon": "fa fa-share",
             "content": "Caso não for possível enviar os dados para o servidor, o motorista pode compartilhar os dados da coleta através de outros aplicativos no botão <img class='botao-app' src='https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/BOTAO_COMPARTILHAR.png' />.",
-            "info": "Um texto padrão já é fornecido pelo aplicativo para facilitar o compartilhamento.",
+            "alerts": [
+                {
+                    "content": "Um texto padrão já é fornecido pelo aplicativo para facilitar o compartilhamento."
+                }
+            ],
             "aftercontent": "Um arquivo XML e as fotos da coleta serão compartilhados de uma só vez através do aplicativo escolhido (Whatsapp, Telegram, Email)",
             "lightbox": [
                 {
