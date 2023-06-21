@@ -80,7 +80,7 @@
             "id": "1.2",
             "title": "Branding/logo",
             "date": "04/05/2022",
-            "content": "![logo](https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/logo.png)<br></br>Apesar de opcional, esta configuração é interessante para o cliente pois aplica a marca dele no aplicativo. Uma vez configurado no servidor, a logo do cliente será baixada e aplicada no aplicativo do cliente. Voce também pode alterar a logo pressionando sobre ela.   />",
+            "content": "![logo](https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/logo.png)<br><br/>Apesar de opcional, esta configuração é interessante para o cliente pois aplica a marca dele no aplicativo. Uma vez configurado no servidor, a logo do cliente será baixada e aplicada no aplicativo do cliente. Voce também pode alterar a logo pressionando sobre ela.",
             "alerts": [
                 {
                     "type": "warning",
