@@ -1,5 +1,5 @@
 {
-    "title": "ColetaLeite!",
+    "title": "RawTracker",
     "language": "pt-BR",
     "color": "rgb(1, 72, 142)",
     "searchplaceholder": "Pesquisar",
@@ -22,7 +22,7 @@
         }
     ],
     "logo": "img/AppColeta.png",
-    "downloadbutton": "javascript:alert('App ainda não disponível')",
+    "downloadbutton": "javascript:alert('Entre em contato para solicitar o aplicativo')",
     "printbutton": "Imprimir",
     "content": [
         {
