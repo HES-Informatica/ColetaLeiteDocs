@@ -21,7 +21,7 @@
             "url": "http://hes-informatica.github.io"
         }
     ],
-    "logo": "img/AppColeta.png",
+    "logo": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/AppColeta.png",
     "downloadbutton": "javascript:alert('Entre em contato para solicitar o aplicativo')",
     "printbutton": "Imprimir",
     "content": [
