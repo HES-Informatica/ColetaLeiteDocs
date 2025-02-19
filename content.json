@@ -90,7 +90,7 @@
             "aftercontent": "Ao inserir a senha, você poderá escolher uma imagem PNG do logo do cliente. Esta imagem <b>substituirá</b> a imagem padrão do aplicativo",
             "lightbox": [
                 {
-                    "image": "img/popup_senha.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/popup_senha.png",
                     "title": "Popup de confirmação de senha"
                 }
             ]
