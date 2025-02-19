@@ -40,11 +40,11 @@
             "content": "O menu de engrenagem <img class=\"botao-app\" src='https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/botao_engrenagem.png'  /> contém as configurações básicas de funcionamento do App",
             "lightbox": [
                 {
-                    "image": "img/login.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/login.png",
                     "title": "Tela de login"
                 },
                 {
-                    "image": "img/login_menu.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/login_menu.png",
                     "title": "Tela de login com menu aberto"
                 }
             ]
@@ -63,15 +63,15 @@
             ],
             "lightbox": [
                 {
-                    "image": "img/popup_adm.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/popup_adm.png",
                     "title": "Tela de login com menu aberto"
                 },
                 {
-                    "image": "img/popup_senha.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/popup_senha.png",
                     "title": "Tela de login com menu aberto"
                 },
                 {
-                    "image": "img/popup_servidor.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/popup_servidor.png",
                     "title": "Tela de login com menu aberto"
                 }
             ]
@@ -129,7 +129,7 @@
             "aftercontent": "Os logins subsequentes podem ser realizados desconectado da rede ou da internet. Caso esteja conectado á fabrica, os login subsequentes também atualizarão os dados (inclusive sua senha, caso tenha solicitado alteração ao administrador).",
             "lightbox": [
                 {
-                    "image": "img/login.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/login.png",
                     "title": "Tela de Login"
                 }
             ]
@@ -158,7 +158,7 @@
             ],
             "lightbox": [
                 {
-                    "image": "img/popup_atualizando.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/popup_atualizando.png",
                     "title": "Download dos dados em andamento"
                 }
             ]
@@ -174,7 +174,7 @@
             ],
             "lightbox": [
                 {
-                    "image": "img/popup_coleta_aberta.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/popup_coleta_aberta.png",
                     "title": "Popup de coleta aberta"
                 }
             ]
@@ -187,7 +187,7 @@
             "content": "Antes de iniciar a coleta, é necessário preencher alguns campos, como o  (modelo/placa) e o odômetro",
             "lightbox": [
                 {
-                    "image": "img/pre_coleta.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/pre_coleta.png",
                     "title": "Tela de Pré-Coleta"
                 }
             ],
@@ -203,11 +203,11 @@
             "content": "A tela de pré-coleta permite ao motorista escolher um dos veículos cadastrados no sistema SCL que já foram baixados para o dispositivo. O usuário pode buscar um veículo cadastrado através da placa ou modelo do veículo",
             "lightbox": [
                 {
-                    "image": "img/popup_veiculo.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/popup_veiculo.png",
                     "title": "Escolha de veículos"
                 },
                 {
-                    "image": "img/popup_veiculo_filtro.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/popup_veiculo_filtro.png",
                     "title": "Escolha de veículos"
                 }
             ]
@@ -234,15 +234,15 @@
             ],
             "lightbox": [
                 {
-                    "image": "img/linhas.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/linhas.png",
                     "title": "Linhas Recentes"
                 },
                 {
-                    "image": "img/linhas_aberta.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/linhas_aberta.png",
                     "title": "Linha aberta"
                 },
                 {
-                    "image": "img/linhas_todas.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/linhas_todas.png",
                     "title": "Todas as Linhas"
                 }
             ]
@@ -250,7 +250,7 @@
         {
             "id": "4.1",
             "title": "Entendendo as Linhas",
-            "aftercontentfile": "entendendo_linhas.md"
+            "aftercontentfile": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/entendendo_linhas.md"
         },
         {
             "id": "5",
@@ -265,7 +265,7 @@
             ],
             "lightbox": [
                 {
-                    "image": "img/tanques.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/tanques.png",
                     "title": "Linhas Recentes"
                 }
             ]
@@ -273,7 +273,7 @@
         {
             "id": "5.1",
             "title": "Entendendo os Tanques",
-            "aftercontentfile": "entendendo_tanques.md"
+            "aftercontentfile": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/entendendo_tanques.md"
         },
         {
             "id": "5.2",
@@ -282,7 +282,7 @@
             "aftercontent": "Aponte a camera do celular para o QR Code. Se a leitura for bem sucedida o formulario de coleta abrira automaticamente",
             "lightbox": [
                 {
-                    "image": "img/qr_code.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/qr_code.png",
                     "title": "Tela de Scanner de QR Code"
                 }
             ]
@@ -293,7 +293,7 @@
             "content": "Ao seleciona um tanque na lista ou através do QRCode, a seguinte tela e apresentada ",
             "lightbox": [
                 {
-                    "image": "img/dados_coleta.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/dados_coleta.png",
                     "title": "Dados da Coleta"
                 }
             ]
@@ -304,7 +304,7 @@
             "contentfile": "informacoes_coleta.md",
             "lightbox": [
                 {
-                    "image": "img/dados_coleta.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/dados_coleta.png",
                     "title": "Dados da Coleta"
                 }
             ]
@@ -315,11 +315,11 @@
             "contentfile": "falha_coleta.md",
             "lightbox": [
                 {
-                    "image": "img/falha_coleta.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/falha_coleta.png",
                     "title": "Falha da Coleta"
                 },
                 {
-                    "image": "img/falha_coleta_opcoes.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/falha_coleta_opcoes.png",
                     "title": "Opções comuns de falha"
                 }
             ]
@@ -337,7 +337,7 @@
             "title": "Encerrando a Coleta",
             "lightbox": [
                 {
-                    "image": "img/popup_enviar_servidor.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/popup_enviar_servidor.png",
                     "title": "Falha da Coleta"
                 }
             ]
@@ -349,7 +349,7 @@
             "content": "Após realizar todas as coletas, será necessário retornar a fábrica e transferir os dados para o servidor no botão <img class='botao-app' src='https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/BOTAO_UPLOAD.png' />",
             "lightbox": [
                 {
-                    "image": "img/popup_enviar_servidor.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/popup_enviar_servidor.png",
                     "title": "Enviar para o servidor"
                 }
             ]
@@ -367,7 +367,7 @@
             "aftercontent": "Um arquivo XML e as fotos da coleta serão compartilhados de uma só vez através do aplicativo escolhido (Whatsapp, Telegram, Email)",
             "lightbox": [
                 {
-                    "image": "img/popup_compartilhar.png",
+                    "image": "https://raw.githubusercontent.com/HES-Informatica/ColetaLeiteDocs/main/img/popup_compartilhar.png",
                     "title": "Compartilhar Coleta"
                 }
             ]
